@@ -25,24 +25,3 @@ module.exports = {
         // ...
     ],
 }
-
-// dodać do setting vsc
-
-// {
-//   "eslint.validate": [
-//     "javascript",
-//     "javascriptreact",
-//     "astro", // Enable .astro
-//     "typescript", // Enable .ts
-//     "typescriptreact" // Enable .tsx
-//   ]
-// }
-
-// prettier
-
-// {
-//   "prettier.documentSelectors": ["**/*.astro"],
-//   "[astro]": {
-//     "editor.defaultFormatter": "esbenp.prettier-vscode"
-//   }
-// }
