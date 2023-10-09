@@ -1,0 +1,11 @@
+---
+export interface Props {
+    to: string
+    text: string
+    type: string
+}
+
+const { to, text, type } = Astro.props
+---
+
+<a class={type} href={to} }>{text}</a>

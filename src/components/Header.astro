@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets'
+import logoSmall from '../images/header/logo-name.png'
+import logoBig from '../images/header/logo-name-big.png'
+import Link from '../components/Link.astro'
+
+const { fun, gallery } = {
+    fun: {
+        to: '#offers',
+        text: 'Rozpocznij zabawę',
+    },
+    gallery: {
+        to: '/gallery',
+        text: 'Galeria',
+    },
+}
+
+const basic =
+    'focus:ring focus:mylightblue w-full rounded-xl px-4 py-2 text-center focus:outline-none text-2xl tracking-wide transition-colors duration-300 focus:outline-none '
+
+const linkStyle = {
+    pink: basic + 'bg-mypink text-stone-100 hover:bg-mylightpink ',
+    blue:
+        basic +
+        'bg-mygrey text-myblue hover:bg-mylightblue hover:text-stone-100 ',
+}
+---
+
+<header
+    class="bg-bg-small lg:bg-bg-big flex min-h-screen flex-col items-center justify-center gap-y-10 px-4"
+>
+    <Image class="w-80 lg:w-96 xl:hidden" src={logoSmall} alt="Logo firmy" />
+    <Image class="hidden w-[700px] xl:block" src={logoBig} alt="Logo firmy" />
+    <div class="flex w-full max-w-xs flex-col items-center gap-y-6">
+        <Link type={linkStyle.pink} to={fun.to} text={fun.text} />
+        <Link type={linkStyle.blue} to={gallery.to} text={gallery.text} />
+    </div>
+</header>
