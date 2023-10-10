@@ -1,6 +1,10 @@
 module.exports = {
     // ...
-    extends: ['eslint:recommended', 'plugin:astro/recommended'],
+    extends: [
+        'eslint:recommended',
+        'plugin:astro/recommended',
+        'plugin:@typescript-eslint/recommended',
+    ],
     ignorePatterns: [
         'dist',
         '.eslintrc.cjs',
@@ -12,7 +16,7 @@ module.exports = {
             // Define the configuration for `.astro` file.
             files: ['*.astro'],
             // Allows Astro components to be parsed.
-            parser: 'astro-eslint-parser',
+            parser: ['astro-eslint-parser', '@typescript-eslint/parser'],
             // Parse the script in `.astro` as TypeScript by adding the following configuration.
             // It's the setting you need when using TypeScript.
             parserOptions: {
