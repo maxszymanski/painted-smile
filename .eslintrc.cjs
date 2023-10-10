@@ -1,10 +1,12 @@
 module.exports = {
     // ...
-    extends: [
-        // ...
-        'plugin:astro/recommended',
+    extends: ['eslint:recommended', 'plugin:astro/recommended'],
+    ignorePatterns: [
+        'dist',
+        '.eslintrc.cjs',
+        'astro.config.mjs',
+        'tailwind.config.cjs',
     ],
-    // ...
     overrides: [
         {
             // Define the configuration for `.astro` file.
@@ -18,8 +20,11 @@ module.exports = {
                 extraFileExtensions: ['.astro'],
             },
             rules: {
-                // override/add rules settings here, such as:
-                // "astro/no-set-html-directive": "error"
+                'astro/prop-types': 'off',
+                'astro-refresh/only-export-components': [
+                    'warn',
+                    { allowConstantExport: true },
+                ],
             },
         },
         // ...
