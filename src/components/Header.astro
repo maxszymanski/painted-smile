@@ -27,20 +27,20 @@ const linkStyle = {
 ---
 
 <header
-    class="relative flex min-h-screen flex-col items-center justify-center gap-y-10 bg-bg-small bg-cover bg-center lg:bg-bg-big"
+    class="relative flex min-h-screen flex-col items-center justify-center gap-y-10 overflow-hidden bg-bg-small bg-cover bg-center lg:bg-bg-big"
 >
     <Image
-        class="absolute left-2 top-2 z-0 h-56 w-56 rotate-12"
+        class="absolute -top-2 left-4 z-0 h-56 w-56 rotate-12 sm:h-60 sm:w-60 md:left-10 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
         src={vectorPink}
         alt=""
     />
     <Image
-        class="absolute bottom-2 right-2 z-0 h-56 w-56"
+        class="absolute -right-2 bottom-2 z-0 h-56 w-56 sm:h-60 sm:w-60 md:bottom-6 md:right-2 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
         src={vectorBlue}
         alt=""
     />
     <Image
-        class="relative z-10 w-80 px-4 lg:w-96 xl:hidden"
+        class="relative z-10 w-80 px-4 lg:w-[32rem] xl:hidden"
         src={logoSmall}
         alt="Logo firmy"
     />
