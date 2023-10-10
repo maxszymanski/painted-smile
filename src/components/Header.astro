@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets'
 import logoSmall from '../images/header/logo-name.png'
 import logoBig from '../images/header/logo-name-big.png'
+import vectorPink from '../images/header/vector-pink.png'
+import vectorBlue from '../images/header/vector-blue.png'
 import Link from '../components/Link.astro'
 
 const { fun, gallery } = {
@@ -20,18 +22,36 @@ const basic =
 
 const linkStyle = {
     pink: basic + 'bg-mypink text-stone-100 hover:bg-mylightpink ',
-    blue:
-        basic +
-        'bg-mygrey text-myblue hover:bg-mylightblue hover:text-stone-100 ',
+    blue: basic + 'bg-mygrey text-myblue hover:bg-mylightblue',
 }
 ---
 
 <header
-    class="bg-bg-small lg:bg-bg-big flex min-h-screen flex-col items-center justify-center gap-y-10 px-4"
+    class="relative flex min-h-screen flex-col items-center justify-center gap-y-10 overflow-hidden bg-bg-small bg-cover bg-center lg:bg-bg-big"
 >
-    <Image class="w-80 lg:w-96 xl:hidden" src={logoSmall} alt="Logo firmy" />
-    <Image class="hidden w-[700px] xl:block" src={logoBig} alt="Logo firmy" />
-    <div class="flex w-full max-w-xs flex-col items-center gap-y-6">
+    <Image
+        class="absolute -top-2 left-4 z-0 h-56 w-56 rotate-12 sm:h-60 sm:w-60 md:left-10 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
+        src={vectorPink}
+        alt=""
+    />
+    <Image
+        class="absolute -right-2 bottom-2 z-0 h-56 w-56 sm:h-60 sm:w-60 md:bottom-6 md:right-2 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
+        src={vectorBlue}
+        alt=""
+    />
+    <Image
+        class="relative z-10 w-80 px-4 lg:w-[32rem] xl:hidden"
+        src={logoSmall}
+        alt="Logo firmy"
+    />
+    <Image
+        class="relative z-10 hidden w-[700px] px-4 xl:mb-4 xl:block"
+        src={logoBig}
+        alt="Logo firmy"
+    />
+    <div
+        class="relative flex w-full max-w-xs flex-col items-center gap-y-6 px-4 xl:gap-y-8 2xl:max-w-sm"
+    >
         <Link type={linkStyle.pink} to={fun.to} text={fun.text} />
         <Link type={linkStyle.blue} to={gallery.to} text={gallery.text} />
     </div>
