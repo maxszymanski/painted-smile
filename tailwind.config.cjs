@@ -18,6 +18,10 @@ module.exports = {
                 mygrey: '#E5EEF0',
                 mylightblue: '#BBF3FF',
                 mylightpink: '#F86F8D',
+                myorange: '#FF8D2B',
+                mygreyblue: '#3DA352',
+                myspiritblue: '#05A8D2'
+                
             },
         },
     },

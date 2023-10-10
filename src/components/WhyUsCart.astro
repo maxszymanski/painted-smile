@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets'
+const {img,type,title,message} = Astro.props
+
+
+---
+
+<div class="flex flex-col items-center">
+    <div class="relative text-center w-[370px]">
+        <Image class="relative" src={img} alt='karta w kształcie kleksa z atramentu'/>
+        <div class="absolute top-12 w-full flex flex-col items-center ">
+            <h3 class={type} >{title}</h3>
+            <p class="text-white w-[235px] text-lg tracking-wide leading-loose">{message}</p>
+        </div>
+       
+    </div>
