@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Link from '../components/Link.astro';
-
+import Link from '../components/Link.astro'
 
 const basic =
     'focus:ring focus:mylightblue rounded-xl px-6 py-3 text-center focus:outline-none text-2xl tracking-wide transition-colors duration-300 focus:outline-none '
@@ -11,10 +10,13 @@ const linkStyle = {
 }
 ---
 
-<Layout title="Malowany Uśmiech | Galeria">
-    <div class="h-screen flex flex-col items-center justify-center px-4 space-y-6">
-        <h2 class="text-center mt-20 text-2xl leading-10">Siema <br> Tu będą focisze 😀</h2>
-        <Link to="/" text="&larr; Wróć na główną" type={linkStyle.blue} />
-
+<Layout title="Malowany Uśmiech | Galeria" mainPage={false}>
+    <div
+        class="flex h-screen flex-col items-center justify-center space-y-6 px-4"
+    >
+        <h2 class="mt-20 text-center text-2xl leading-10">
+            Siema <br /> Tu będą focisze 😀
+        </h2>
+        <Link to="/" text="← Wróć na główną" type={linkStyle.blue} />
     </div>
 </Layout>

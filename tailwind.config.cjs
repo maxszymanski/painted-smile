@@ -4,6 +4,10 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
     content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
     theme: {
+        screens: {
+            xs: '375px',
+            ...defaultTheme.screens,
+        },
         extend: {
             fontFamily: {
                 sans: ['Atma', ...defaultTheme.fontFamily.sans],
@@ -20,8 +24,7 @@ module.exports = {
                 mylightpink: '#F86F8D',
                 myorange: '#FF8D2B',
                 mygreyblue: '#3DA352',
-                myspiritblue: '#05A8D2'
-                
+                myspiritblue: '#05A8D2',
             },
         },
     },
