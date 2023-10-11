@@ -2,26 +2,35 @@
 const { mainPage = true } = Astro.props
 ---
 
-<nav class="absolute top-0 z-30 flex w-full items-center justify-center">
-    <ul class="flex space-x-6 py-5">
-        <li class="item flex justify-center">
-            <a class="p-3" href="/#o-nas">O nas</a>
-        </li>
-        <li class="item flex justify-center">
-            {
-                mainPage ? (
-                    <a class="p-3" href="/galeria">
-                        Galeria
-                    </a>
-                ) : (
-                    <a class="p-3" href="/#oferta">
-                        Oferta
-                    </a>
-                )
-            }
-        </li>
-        <li class="item flex justify-center">
-            <button class="contact-btn p-3">Kontakt</button>
-        </li>
-    </ul>
-</nav>
+    <nav class="absolute top-0 z-30 flex w-full items-center justify-center">
+        <ul class="flex items-center justify-between py-5 gap-x-5 lg:py-10 xl:gap-x-8 ">
+            <li class="item flex justify-center">
+                <a class="relative p-3 lg:px-6 text-myblue text-xl xs:uppercase font-semibold tracking-wider group lg:text-2xl xl:text-3xl" href="/#o-nas">
+                    <span class="relative z-20">O nas</span>
+                    <span class="absolute top-0 left-0 bg-hover-green h-full z-10 w-0 transition-all duration-300 lg:group-hover:w-full "></span>
+                  </a>
+            </li>
+            <li class="item flex justify-center">
+                {
+                    mainPage ? (
+                    <a class="relative p-3 lg:px-6 text-myblue text-xl xs:uppercase font-semibold tracking-wider group lg:text-2xl xl:text-3xl" href="/galeria">
+                    <span class="relative z-20">Galeria</span>
+                    <span class="absolute top-0 left-0 bg-hover-pink h-full z-10 w-0 transition-all duration-300 lg:group-hover:w-full "></span>
+                  </a>
+                    ) : (
+                    <a class="relative p-3 lg:px-6 text-myblue text-xl xs:uppercase font-semibold tracking-wider group lg:text-2xl xl:text-3xl" href="/#oferta">
+                    <span class="relative z-20">Oferta</span>
+                    <span class="absolute top-0 left-0 bg-hover-pink h-full z-10 w-0 transition-all duration-300 lg:group-hover:w-full "></span>
+                  </a>
+                    )
+                }
+            </li>
+            <li class="item flex justify-center">
+                <button class="contact-btn relative p-3 lg:px-6 text-myblue text-xl xs:uppercase font-semibold tracking-wider group lg:text-2xl xl:text-3xl">
+                    <span class="relative z-20">Kontakt</span>
+                    <span class="absolute top-0 left-0 bg-hover-blue h-full z-10 w-0 transition-all duration-300 lg:group-hover:w-full "></span>
+                  </button>
+            </li>
+        </ul>
+    </nav>
+

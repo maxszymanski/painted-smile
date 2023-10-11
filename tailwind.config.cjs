@@ -15,6 +15,9 @@ module.exports = {
             backgroundImage: {
                 'bg-small': "url('/src/images/header/lines-small.webp')",
                 'bg-big': "url('/src/images/header/lines-big.webp')",
+                'hover-green': "url('/src/images/nav/hover-green.png')",
+                'hover-pink': "url('/src/images/nav/hover-pink.png')",
+                'hover-blue': "url('/src/images/nav/hover-blue.png')",
             },
             colors: {
                 mypink: '#FF8DA6',
