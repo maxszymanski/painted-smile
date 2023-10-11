@@ -5,16 +5,16 @@ const { mainPage = true } = Astro.props
 <nav class="absolute top-0 z-30 flex w-full items-center justify-center">
     <ul class="flex space-x-6 py-5">
         <li class="item flex justify-center">
-            <a class="p-3" href="/#whyus">O nas</a>
+            <a class="p-3" href="/#o-nas">O nas</a>
         </li>
         <li class="item flex justify-center">
             {
                 mainPage ? (
-                    <a class="p-3" href="/gallery">
+                    <a class="p-3" href="/galeria">
                         Galeria
                     </a>
                 ) : (
-                    <a class="p-3" href="/#whyus">
+                    <a class="p-3" href="/#oferta">
                         Oferta
                     </a>
                 )
