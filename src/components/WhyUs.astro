@@ -6,6 +6,8 @@ import vectorGold from '../images/whyUs/vector-gold.png'
 import vectorBlue from '../images/whyUs/vector-lightblue.png'
 import vectorArrow from '../images/whyUs/vector-arrow.png'
 import vectorArrowLeft from '../images/whyUs/vector-arrow-left.png'
+import arrowLeft from '../images/whyUs/arrow-left.png'
+import arrowBottom from '../images/whyUs/arrow-bottom.png'
 const basic = 'text-3xl font-bold tracking-widest mt-3 mb-5'
 const data = {
     title: 'Dlaczego my ',
@@ -13,47 +15,60 @@ const data = {
         title: 'Profesjonalizm',
         message:
             'Jesteśmy doświadczonym zespołem, który dba o każdy szczegół, aby zapewnić świetną zabawę i udane urodziny.',
-        type: basic + ' text-myorange',
+        type: basic + ' text-myorange ',
     },
     blue: {
         title: 'Spokój Ducha',
         message:
             'Pozwalamy rodzicom skoncentrować się na własnej zabawie, wiedząc, że ich dzieci są w dobrych rękach',
-        type: basic + ' text-myspiritblue',
+        type: basic + ' text-myspiritblue ',
     },
     green: {
         title: 'Bezpieczeństwo',
         message:
             'Zapewniamy bezpieczeństwo dzieci i przestrzegamy wszystkich niezbędnych standardów higieny.',
-        type: basic + ' text-mygreyblue',
+        type: basic + ' text-mygreyblue ',
     },
 }
 const { title, gold, blue, green } = data
 ---
 
 <section id="o-nas" class="overflow-x-hidden">
-    <div class="container mx-auto w-full px-4 py-12">
-        <h2 class="mb-16 mt-4 text-4xl font-medium text-myblue">{title}</h2>
-        <div class="flex flex-col items-center space-y-2.5">
+    <div class="container mx-auto w-full px-4 py-12 lg:py-16 xl:py-24">
+        <h2 class="mb-16 xl:mb-20 text-4xl font-medium lg:text-5xl 2xl:text-6xl text-myblue">{title}</h2>
+        <div class=" relative flex flex-col items-center space-y-2.5 space w-5xl max-w-[992px] pb-6 mx-auto ">
             <WhyUsCart
                 img={vectorGold}
                 type={gold.type}
                 title={gold.title}
                 message={gold.message}
+                className="flex flex-col items-center "
             />
             <Image
-                class="rotate-[35deg]"
+                class="rotate-[35deg] lg:absolute right-32 top-52 lg:-rotate-1"
                 src={vectorArrow}
                 alt="niebieska strzałka"
             />
-            <WhyUsCart
+            <Image
+                class="hidden absolute lg:block left-16 top-[16.5rem] rotate-[122deg]"
+                src={arrowBottom}
+                alt="niebieska strzałka"
+            />
+            <Image
+                class="hidden absolute lg:block -bottom-1 left-96 -rotate-3"
+                src={arrowBottom}
+                alt="niebieska strzałka"
+            />
+            <div class="flex flex-col items-center space-y-2.5 lg:flex-row-reverse lg:justify-between w-full lg:pt-32">
+                <WhyUsCart
                 img={vectorGreen}
                 type={green.type}
                 title={green.title}
                 message={green.message}
+                className="flex flex-col items-center"
             />
             <Image
-                class="-rotate-[35deg]"
+                class="-rotate-[35deg] lg:hidden"
                 src={vectorArrowLeft}
                 alt="niebieska strzałka"
             />
@@ -62,7 +77,10 @@ const { title, gold, blue, green } = data
                 type={blue.type}
                 title={blue.title}
                 message={blue.message}
+                className="flex flex-col items-center "
             />
+            </div>
+            
         </div>
     </div>
 </section>
