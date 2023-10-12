@@ -1,11 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Link from '../components/Link.astro'
 
 const basic =
-'focus:ring focus:ring-myblue rounded-xl px-6 py-3 text-center focus:outline-none text-2xl tracking-wide transition-colors duration-300 focus:ring-offset-2 bg-mygrey text-myblue hover:bg-mylightblue'
-
-
+    'focus:ring focus:ring-myblue rounded-xl px-6 py-3 text-center focus:outline-none text-2xl tracking-wide transition-colors duration-300 focus:ring-offset-2 bg-mygrey text-myblue hover:bg-mylightblue'
 ---
 
 <Layout title="Malowany Uśmiech | Galeria" mainPage={false}>
@@ -15,6 +12,10 @@ const basic =
         <h2 class="mt-20 text-center text-2xl leading-10">
             Siema <br /> Tu będą focisze 😀
         </h2>
-        <Link to="/" text="← Wróć na główną" type={basic} />
+        <a
+            href="/"
+            class="rounded-xl bg-mygrey px-6 py-3 text-center text-2xl tracking-wide text-myblue transition-colors duration-300 hover:bg-mylightblue focus:outline-none focus:ring focus:ring-myblue focus:ring-offset-2"
+            >← Wróć na główną</a
+        >
     </div>
 </Layout>

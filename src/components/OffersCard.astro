@@ -1,12 +1,16 @@
 ---
+import '@fontsource/love-ya-like-a-sister'
 import { Image } from 'astro:assets'
-const { bg, icon, altText, title, priceOne, priceTwo, pin, text } = Astro.props
+const { bg, icon, altText, title, priceOne, priceTwo, pin, text, className } =
+    Astro.props
 ---
 
-<div class="bg-mycardblue relative max-w-md rounded-xl p-4">
+<div
+    class="relative flex max-w-md flex-col justify-between rounded-xl bg-mycardblue p-4 sm:px-6 md:min-w-[447px]"
+>
     <Image src={pin} alt="Pinezka" class="absolute right-1 top-2 w-10" />
-    <div class="flex items-center justify-between">
-        <div class="relative w-32">
+    <div class="flex items-center justify-between py-2">
+        <div class="relative w-32 shrink-0">
             <Image src={bg} alt="" class="w-full" />
             <Image
                 src={icon}
@@ -14,11 +18,11 @@ const { bg, icon, altText, title, priceOne, priceTwo, pin, text } = Astro.props
                 class="absolute left-5 top-6 w-24"
             />
         </div>
-        <h2>{title}</h2>
+        <h2 class={className}>{title}</h2>
     </div>
-    <p>{text}</p>
-    <div>
-        <p>Cena:</p>
+    <p class="py-6 text-lg">{text}</p>
+    <div class="space-y-1">
+        <p class="text-lg font-bold">Cena:</p>
         {priceOne && <p>{priceOne}</p>}
         {priceTwo && <p>{priceTwo}</p>}
         {
@@ -27,10 +31,15 @@ const { bg, icon, altText, title, priceOne, priceTwo, pin, text } = Astro.props
             )
         }
     </div>
-    <div class="flex w-full items-center justify-between">
-        <button>Zamawiam</button>
-        <button>
-            <span>Więcej</span>
+    <div class="mt-auto flex w-full items-center justify-between pb-4 pt-7">
+        <button
+            class="rounded-xl bg-myorder px-6 py-2 text-xl text-stone-100 transition-colors duration-300 hover:bg-myspiritblue focus:outline-none focus:ring focus:ring-myspiritblue focus:ring-offset-2"
+            >Zamawiam</button
+        >
+        <button
+            class="rounded-xl bg-more-btn bg-center px-6 py-2 text-lg xs:px-8"
+        >
+            Więcej &rarr;
             <span></span>
         </button>
     </div>

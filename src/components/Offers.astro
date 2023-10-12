@@ -26,6 +26,8 @@ const cards = [
         text: 'Chcesz uczynić urodziny Twojego dziecka niezapomnianymi? Oferujemy profesjonalne usługi animacyjne, które dostarczą mnóstwo radości i uśmiechów na twarzach maluchów oraz dorosłych! Personalizujemy animacje, aby sprawić, że dziecko poczuje się wyjątkowo.',
         priceOne: '1 animator do 10 dzieci 1h/200zł',
         priceTwo: '2 animatorów 1h/250zł',
+        className:
+            'font-love grow text-center text-2xl text-cardpink md:text-4xl',
     },
     {
         iconBg: blueBg,
@@ -37,6 +39,8 @@ const cards = [
         text: 'Wasze wesele to wyjątkowy dzień, który chcecie podzielić z najbliższymi, w tym z najmłodszymi gośćmi. Nasza oferta animacji dla dzieci na weselu pozwoli rodzicom i dorosłym bawić się na parkiecie, wiedząc, że ich dzieci mają zapewnioną dobrą zabawę i opiekę.',
         priceOne: '2 animatorów 2h/ 600zł',
         priceTwo: 'Każda kolejna godzina 200zł',
+        className:
+            'font-love grow text-center text-2xl text-myspiritblue md:text-4xl',
     },
     {
         iconBg: yellowBg,
@@ -48,6 +52,8 @@ const cards = [
         text: 'Chrzty i Pierwsze Komunie to wyjątkowe chwile w życiu dziecka i całej rodziny. Nasza oferta animacji na te uroczystości jest stworzona, aby uczynić te dni jeszcze bardziej radosnymi i niezapomnianymi. Oferujemy różnorodne rozrywki i atrakcje dla dzieci i dorosłych.',
         priceOne: '1 animator do 10 dzieci 1h/200zł',
         priceTwo: '2 animatorów 1h/250zł',
+        className:
+            'font-love grow text-center text-2xl text-cardyellow md:text-4xl',
     },
     {
         iconBg: orangeBg,
@@ -58,6 +64,8 @@ const cards = [
         title: 'Animacja na balu Karnawałowym ',
         text: 'Bal karnawałowy dla dzieci to czas, gdy marzenia stają się rzeczywistością, a wyobraźnia nie zna granic. Nasza oferta animacji na balu karnawałowym zapewni Waszym dzieciom niezapomnianą przygodę w świecie kolorów, bajek i uśmiechu.',
         priceOne: 'Cena: 1 animator 800 zł/2h',
+        className:
+            'font-love grow text-center text-2xl text-cardorange md:text-4xl',
     },
     {
         iconBg: greenBg,
@@ -68,6 +76,8 @@ const cards = [
         title: 'Animacja na pikniku',
         text: 'Chcesz uczynić urodziny Twojego dziecka niezapomnianymi? Oferujemy profesjonalne usługi animacyjne, które dostarczą mnóstwo radości i uśmiechów na twarzach maluchów oraz dorosłych! Personalizujemy animacje, aby sprawić, że dziecko poczuje się wyjątkowo.',
         priceOne: 'Cena oraz oferta animacji ustalana indywidualnie',
+        className:
+            'font-love grow text-center text-2xl text-mygreyblue md:text-4xl',
     },
     {
         iconBg: redBg,
@@ -78,18 +88,22 @@ const cards = [
         title: 'Wizyta Świętego Mikołaja',
         text: 'Czy marzysz o tym, aby Święty Mikołaj odwiedził Twoje dzieci podczas świąt? Nasza oferta wizyty Świętego Mikołaja dostarczy niezapomnianych chwil radości i magii w okresie bożonarodzeniowym.',
         priceOne: '03. 12 – 07.12 – 250 zł; ',
-        priceTwo: '01.12, 07.12- 11.12 – 200zł',
+        priceTwo: '01.12,   07.12- 11.12 – 200zł',
+        className:
+            'font-love grow text-center text-2xl text-cardred md:text-4xl',
     },
 ]
 ---
 
-<section id="oferta" class="px-4">
+<section id="oferta" class="mx-auto px-4 py-12 2xl:container lg:py-16 xl:py-24">
     <h2
         class="mb-16 text-4xl font-medium text-myblue lg:text-5xl xl:mb-20 2xl:text-6xl"
     >
         Nasze usługi
     </h2>
-    <div class="flex flex-col items-center space-y-20">
+    <div
+        class="flex flex-col items-center gap-5 space-y-16 md:flex-row md:flex-wrap md:items-stretch md:justify-evenly md:gap-10 md:space-y-0 xl:gap-20"
+    >
         {
             cards.map((card) => (
                 <OffersCard
@@ -101,6 +115,7 @@ const cards = [
                     priceTwo={card.priceTwo}
                     pin={card.pin}
                     text={card.text}
+                    className={card.className}
                 />
             ))
         }
