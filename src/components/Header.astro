@@ -6,31 +6,25 @@ import vectorPink from '../images/header/vector-pink.png'
 import vectorBlue from '../images/header/vector-blue.png'
 import Link from '../components/Link.astro'
 
-const { fun, gallery } = {
-    fun: {
-        to: '#whyus',
-        text: 'Nasze oferty',
-    },
-    gallery: {
-        to: '/gallery',
-        text: 'Galeria',
-    },
+const link = {
+    to: '#o-nas',
+    text: 'Nasze oferty',
 }
 
 const basic =
-'focus:ring focus:ring-mylightpink w-full rounded-xl px-4 py-2 text-center focus:outline-none text-2xl tracking-wide transition-colors duration-300  focus:ring-offset-2 bg-mypink text-stone-100 hover:bg-mylightpink'
+    'focus:ring focus:ring-mylightpink w-full rounded-xl px-4 py-2 text-center focus:outline-none text-2xl tracking-wide transition-colors duration-300  focus:ring-offset-2 bg-mypink text-stone-100 hover:bg-mylightpink'
 ---
 
 <header
-    class="relative xs:min-h-[500px] sm:min-h-[600px] flex h-[100svh] flex-col items-center justify-center gap-y-12 overflow-hidden bg-bg-small bg-cover bg-center lg:bg-bg-big"
+    class="relative flex h-[100svh] flex-col items-center justify-center gap-y-12 overflow-hidden bg-bg-small bg-cover bg-center xs:min-h-[500px] sm:min-h-[600px] lg:bg-bg-big"
 >
     <Image
-        class="sm:block absolute -left-2 bottom-2 z-0 hidden h-56 w-56 rotate-12 sm:-top-2 sm:left-4 sm:h-60 sm:w-60 md:left-10 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
+        class="absolute -left-2 bottom-2 z-0 hidden h-56 w-56 rotate-12 sm:-top-2 sm:left-4 sm:block sm:h-60 sm:w-60 md:left-10 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
         src={vectorPink}
         alt=""
     />
     <Image
-        class="xs:block absolute -right-2 bottom-2 z-0 hidden h-56 w-56 sm:h-60 sm:w-60 md:bottom-6 md:right-2 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
+        class="absolute -right-2 bottom-2 z-0 hidden h-56 w-56 xs:block sm:h-60 sm:w-60 md:bottom-6 md:right-2 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
         src={vectorBlue}
         alt=""
     />
@@ -47,6 +41,6 @@ const basic =
     <div
         class="relative flex w-full max-w-xs flex-col items-center gap-y-6 px-4 xl:gap-y-8 2xl:max-w-sm"
     >
-        <Link type={basic} to={fun.to} text={fun.text} />
+        <Link type={basic} to={link.to} text={link.text} />
     </div>
 </header>
