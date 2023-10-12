@@ -2,35 +2,51 @@
 const { mainPage = true } = Astro.props
 ---
 
-    <nav class="absolute top-0 z-30 flex w-full items-center justify-center">
-        <ul class="flex items-center justify-between py-5 gap-x-5 lg:py-10 xl:gap-x-8 ">
-            <li class="item flex justify-center">
-                <a class="relative p-3 lg:px-6 text-myblue text-xl xs:uppercase font-semibold tracking-wider group lg:text-2xl xl:text-3xl" href="/#o-nas">
-                    <span class="relative z-20">O nas</span>
-                    <span class="absolute top-0 left-0 bg-hover-green h-full z-10 w-0 transition-all duration-300 lg:group-hover:w-full "></span>
-                  </a>
-            </li>
-            <li class="item flex justify-center">
-                {
-                    mainPage ? (
-                    <a class="relative p-3 lg:px-6 text-myblue text-xl xs:uppercase font-semibold tracking-wider group lg:text-2xl xl:text-3xl" href="/galeria">
-                    <span class="relative z-20">Galeria</span>
-                    <span class="absolute top-0 left-0 bg-hover-pink h-full z-10 w-0 transition-all duration-300 lg:group-hover:w-full "></span>
-                  </a>
-                    ) : (
-                    <a class="relative p-3 lg:px-6 text-myblue text-xl xs:uppercase font-semibold tracking-wider group lg:text-2xl xl:text-3xl" href="/#oferta">
-                    <span class="relative z-20">Oferta</span>
-                    <span class="absolute top-0 left-0 bg-hover-pink h-full z-10 w-0 transition-all duration-300 lg:group-hover:w-full "></span>
-                  </a>
-                    )
-                }
-            </li>
-            <li class="item flex justify-center">
-                <button class="contact-btn relative p-3 lg:px-6 text-myblue text-xl xs:uppercase font-semibold tracking-wider group lg:text-2xl xl:text-3xl">
-                    <span class="relative z-20">Kontakt</span>
-                    <span class="absolute top-0 left-0 bg-hover-blue h-full z-10 w-0 transition-all duration-300 lg:group-hover:w-full "></span>
-                  </button>
-            </li>
-        </ul>
-    </nav>
-
+<nav class="absolute top-0 z-30 flex w-full items-center justify-center">
+    <ul
+        class="flex items-center justify-between gap-x-5 py-5 lg:py-10 xl:gap-x-8"
+    >
+        <li class="item flex justify-center">
+            <a
+                class="group relative p-3 text-xl font-semibold tracking-wider text-myblue xs:uppercase lg:px-6 lg:text-2xl xl:text-3xl"
+                href="/#o-nas"
+            >
+                <span class="relative z-20">O nas</span>
+                <span
+                    class="absolute left-0 top-0 z-10 h-full w-0 bg-hover-green transition-all duration-300 lg:group-hover:w-full"
+                ></span>
+            </a>
+        </li>
+        <li class="item flex justify-center">
+            {
+                mainPage ? (
+                    <a
+                        class="group relative p-3 text-xl font-semibold tracking-wider text-myblue xs:uppercase lg:px-6 lg:text-2xl xl:text-3xl"
+                        href="/galeria"
+                    >
+                        <span class="relative z-20">Galeria</span>
+                        <span class="absolute left-0 top-0 z-10 h-full w-0 bg-hover-pink transition-all duration-300 lg:group-hover:w-full " />
+                    </a>
+                ) : (
+                    <a
+                        class="group relative p-3 text-xl font-semibold tracking-wider text-myblue xs:uppercase lg:px-6 lg:text-2xl xl:text-3xl"
+                        href="/#oferta"
+                    >
+                        <span class="relative z-20">Oferta</span>
+                        <span class="absolute left-0 top-0 z-10 h-full w-0 bg-hover-pink transition-all duration-300 lg:group-hover:w-full " />
+                    </a>
+                )
+            }
+        </li>
+        <li class="item flex justify-center">
+            <button
+                class="contact-btn group relative p-3 text-xl font-semibold tracking-wider text-myblue xs:uppercase lg:px-6 lg:text-2xl xl:text-3xl"
+            >
+                <span class="relative z-20">Kontakt</span>
+                <span
+                    class="absolute left-0 top-0 z-10 h-full w-0 bg-hover-blue transition-all duration-300 lg:group-hover:w-full"
+                ></span>
+            </button>
+        </li>
+    </ul>
+</nav>
