@@ -28,6 +28,7 @@ module.exports = {
                 myorange: '#FF8D2B',
                 mygreyblue: '#3DA352',
                 myspiritblue: '#05A8D2',
+                mycardblue: '#F8FEFF',
             },
         },
     },

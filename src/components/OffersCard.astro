@@ -1,14 +1,18 @@
 ---
 import { Image } from 'astro:assets'
-const { bg, icon, altText, title, priceOne, priceTwo, pin } = Astro.props
+const { bg, icon, altText, title, priceOne, priceTwo, pin, text } = Astro.props
 ---
 
-<div class="relative max-w-md">
-    <Image src={pin} alt="Pinezka" class="ablosule right-5 top-5" />
-    <div>
-        <div>
-            <Image src={bg} alt="" />
-            <Image src={icon} alt={altText} />
+<div class="bg-mycardblue relative max-w-md rounded-xl p-4">
+    <Image src={pin} alt="Pinezka" class="absolute right-1 top-2 w-10" />
+    <div class="flex items-center justify-between">
+        <div class="relative w-32">
+            <Image src={bg} alt="" class="w-full" />
+            <Image
+                src={icon}
+                alt={altText}
+                class="absolute left-5 top-6 w-24"
+            />
         </div>
         <h2>{title}</h2>
     </div>

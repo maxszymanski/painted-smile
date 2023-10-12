@@ -1,10 +1,10 @@
 ---
 import blueIcon from '../images/cards/blue-icon.png'
 import redIcon from '../images/cards/red-icon.png'
-import yellowIcon from '../images/cards/yellow-pin.png'
+import yellowIcon from '../images/cards/yellow-icon.png'
 import bluePin from '../images/cards/blue-pin.png'
 import redPin from '../images/cards/red-pin.png'
-import yellowPin from '../images/cards/yellow-icon.png'
+import yellowPin from '../images/cards/yellow-pin.png'
 import orangeIcon from '../images/cards/orange-icon.png'
 import greenIcon from '../images/cards/green-icon.png'
 import santaIcon from '../images/cards/santa-icon.png'
@@ -13,6 +13,7 @@ import blueBg from '../images/cards/blue-bg.png'
 import yellowBg from '../images/cards/yellow-bg.png'
 import orangeBg from '../images/cards/orange-bg.png'
 import greenBg from '../images/cards/green-bg.png'
+import OffersCard from './OffersCard.astro'
 
 const cards = [
     {
@@ -82,19 +83,24 @@ const cards = [
 ]
 ---
 
-<section id="oferta">
-    <h2>Nasze usługi</h2>
-    <div>
+<section id="oferta" class="px-4">
+    <h2
+        class="mb-16 text-4xl font-medium text-myblue lg:text-5xl xl:mb-20 2xl:text-6xl"
+    >
+        Nasze usługi
+    </h2>
+    <div class="flex flex-col items-center space-y-20">
         {
             cards.map((card) => (
                 <OffersCard
-                    bg={iconBg}
-                    icon={icon}
-                    altText={altText}
-                    title={title}
-                    priceOne={priceOne}
-                    priceTwo={priceTwo}
-                    pin={pin}
+                    bg={card.bg}
+                    icon={card.icon}
+                    altText={card.altText}
+                    title={card.title}
+                    priceOne={card.priceOne}
+                    priceTwo={card.priceTwo}
+                    pin={card.pin}
+                    text={card.text}
                 />
             ))
         }
