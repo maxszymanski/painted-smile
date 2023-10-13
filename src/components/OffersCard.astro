@@ -6,7 +6,7 @@ const { bg, icon, altText, title, priceOne, priceTwo, pin, text, className } =
 ---
 
 <div
-    class="relative flex max-w-md flex-col justify-between rounded-xl bg-mycardblue p-4 sm:px-5 md:min-w-[447px]"
+    class="relative flex max-w-md flex-col justify-between rounded-xl bg-mycardblue p-4 shadow-[3px_8px_23px_-7px_rgba(203,235,247,1)] sm:p-5 md:min-w-[447px]"
 >
     <Image src={pin} alt="Pinezka" class="absolute right-1 top-2 w-10" />
     <div class="flex items-center justify-between py-2">
@@ -20,7 +20,7 @@ const { bg, icon, altText, title, priceOne, priceTwo, pin, text, className } =
         </div>
         <h2 class={className}>{title}</h2>
     </div>
-    <p class="py-6 text-lg md:h-[188px] md:leading-8">{text}</p>
+    <p class="py-6 text-lg md:leading-8">{text}</p>
     <div class="space-y-1 md:pt-4">
         <p class="text-lg font-bold">Cena:</p>
         {priceOne && <p>{priceOne}</p>}
@@ -33,14 +33,22 @@ const { bg, icon, altText, title, priceOne, priceTwo, pin, text, className } =
     </div>
     <div class="mt-auto flex w-full items-center justify-between pb-4 pt-7">
         <button
-            class="rounded-xl bg-myorder px-6 py-2 text-xl text-stone-100 transition-colors duration-300 hover:bg-myspiritblue focus:outline-none focus:ring focus:ring-myspiritblue focus:ring-offset-2"
+            class="rounded-xl bg-myorder px-6 py-2 text-xl text-white transition-colors duration-300 hover:bg-myspiritblue focus:outline-none focus:ring focus:ring-myspiritblue focus:ring-offset-2"
             >Zamawiam</button
         >
         <button
-            class="rounded-xl bg-more-btn bg-center px-6 py-2 text-lg xs:px-8"
+            class="rounded-xl bg-more-btn bg-center px-6 py-2 text-lg transition duration-300 hover:drop-shadow-[0px_0px_14px_rgb(255,141,161)] focus:outline-none focus:drop-shadow-[0px_0px_14px_rgb(255,141,161)] xs:px-8"
         >
             Więcej &rarr;
-            <span></span>
         </button>
     </div>
 </div>
+
+<style>
+    .d {
+        color: #b5e7f7;
+    }
+</style>
+
+<!-- rgba(203,235,247,1)   -->
+<!-- rgba(181,231,247,1) -->

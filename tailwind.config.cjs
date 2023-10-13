@@ -36,6 +36,7 @@ module.exports = {
                 cardyellow: '#FFBF1D',
                 cardred: '#C92424',
                 cardorange: '#FF8D2B',
+                bgblue: '#E1F9FF',
             },
         },
     },
