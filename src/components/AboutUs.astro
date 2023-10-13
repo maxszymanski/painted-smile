@@ -5,12 +5,12 @@
 <section id="o-nas" class="bg-mycardblue px-4 py-12 lg:py-16 xl:py-24">
     <div class="mx-auto 2xl:container">
         <h2
-            class="mb-16 text-4xl font-medium text-myblue lg:text-5xl xl:mb-20 2xl:text-6xl"
+            class="mb-12 text-4xl font-medium text-myblue lg:text-5xl xl:mb-20 2xl:text-6xl"
         >
             Kim jesteśmy
         </h2>
-        <div class="flex items-center">
-            <div class="flex-1 space-y-5 p-4">
+        <div class="flex flex-col items-center sm:flex-row">
+            <div class="flex-1 space-y-5 p-2">
                 <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                     Saepe impedit maxime natus. Expedita, animi amet nobis
@@ -36,17 +36,35 @@
                     dignissimos, quasi odit praesentium laboriosam! Ratione.
                 </p>
             </div>
-            <div class="relative h-[700px] w-full flex-1 bg-red-500">
+            <div
+                class="relative flex flex-col items-center space-y-12 bg-transparent pt-12 sm:flex-1"
+            >
                 <div
-                    class="absolute right-5 top-24 h-56 w-56 rotate-[20deg] rounded-3xl bg-green-300"
+                    class="after:bg-fun relative h-56 w-56 -rotate-6 rounded-xl bg-myorder after:absolute after:left-0 after:top-0 after:z-10 after:h-[103%] after:w-[103%] after:rotate-[10deg] after:rounded-xl after:bg-cover after:bg-center after:content-[''] xs:h-72 xs:w-72"
                 >
                 </div>
                 <div
-                    class="absolute bottom-12 left-16 h-56 w-56 rounded-3xl bg-orange-300"
+                    class="after:bg-santa relative h-56 w-56 rotate-6 rounded-xl bg-[#FFE8D4] after:absolute after:left-0 after:top-0 after:z-10 after:h-[103%] after:w-[103%] after:-rotate-[10deg] after:rounded-xl after:bg-cover after:bg-center after:content-[''] xs:h-72 xs:w-72"
                 >
                 </div>
-                <div class="absolute h-56 w-56 rounded-3xl bg-yellow-300"></div>
+                <div
+                    class="after:bg-about relative h-56 w-56 -rotate-6 rounded-xl bg-[#FFDFE6] after:absolute after:left-0 after:top-0 after:z-10 after:h-[103%] after:w-[103%] after:rotate-[10deg] after:rounded-xl after:bg-cover after:bg-center after:content-[''] xs:h-72 xs:w-72"
+                >
+                </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    /* .dupa::after {
+        content: '';
+        background-image: url();
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: green;
+    } */
+</style>

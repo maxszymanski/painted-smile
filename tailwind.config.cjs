@@ -20,6 +20,9 @@ module.exports = {
                 'hover-pink': "url('/src/images/nav/hover-pink.png')",
                 'hover-blue': "url('/src/images/nav/hover-blue.png')",
                 'more-btn': "url('/src/images/cards/more-btn.png')",
+                santa: "url('/src/images/aboutus/santa.png')",
+                fun: "url('/src/images/aboutus/fun.png')",
+                about: "url('/src/images/aboutus/about.png')",
             },
             colors: {
                 mypink: '#FF8DA6',
