@@ -2,6 +2,7 @@
 import '@fontsource/atma'
 import Nav from '../components/Nav.astro'
 import Contact from '../components/Contact.astro'
+import Footer from '../components/Footer.astro'
 interface Props {
     title: string
     mainPage: boolean
@@ -22,19 +23,89 @@ const { title, mainPage } = Astro.props
         <Nav mainPage={mainPage} />
         <Contact />
         <slot />
+        <Footer />
     </body>
 </html>
 
 <script>
     const form = document.querySelector('#form')
-    const contactBtn = document.querySelector('.contact-btn')
     const body = document.querySelector('.body')
+    const ordersBtn = document.querySelectorAll('.order-btn')
+    const closeForm = document.querySelectorAll('.close-form')
 
-    const toggleForm = () => {
+    const formColors = [
+        {
+            bg: 'bg-myorder',
+            button: 'bg-myspiritblue',
+            text: 'text-white',
+            hover: 'blue',
+        },
+        {
+            bg: 'bg-formpink',
+            button: 'bg-cardpink',
+            text: 'text-cardpink',
+            hover: 'red',
+        },
+        {
+            bg: 'bg-myorder',
+            button: 'bg-myspiritblue',
+            text: 'text-white',
+            hover: 'blue',
+        },
+        {
+            bg: 'bg-formyellow',
+            button: 'bg-formbtn',
+            text: 'text-cardorange',
+            hover: 'yellow',
+        },
+        {
+            bg: 'bg-formorange',
+            button: 'bg-cardorange',
+            text: 'text-white',
+            hover: 'orange',
+        },
+        {
+            bg: 'bg-formgreen',
+            button: 'bg-mygreyblue',
+            text: 'text-white',
+            hover: 'green',
+        },
+        {
+            bg: 'bg-formred',
+            button: 'bg-cardred',
+            text: 'text-white',
+            hover: 'santa',
+        },
+    ]
+
+    const toggleForm = (index: number) => {
+        const formBtn = form.querySelector('form').querySelector('.submit')
+        const titleForm = form.querySelector('form').querySelector('.title')
+        const infoForm = form.querySelector('form').querySelector('.info')
+        const inputs = form.querySelector('form').querySelectorAll('.focus')
+        form.firstElementChild.classList.toggle(formColors[index].bg)
+        formBtn.classList.toggle(formColors[index].button)
+        formBtn.classList.toggle(formColors[index].hover)
+        titleForm.classList.toggle(formColors[index].text)
+        infoForm.classList.toggle(formColors[index].text)
         form.classList.toggle('hidden')
         form.classList.toggle('flex')
         body.classList.toggle('overflow-hidden')
     }
 
-    contactBtn.addEventListener('click', toggleForm)
+    ordersBtn.forEach((btn, index) =>
+        btn.addEventListener('click', () => toggleForm(index))
+    )
+    closeForm.forEach((btn) =>
+        btn.addEventListener('click', () => {
+            const currentClass = form.firstElementChild.className
+            const bgs = formColors.map((item) => item.bg)
+
+            const currentColor = bgs.findIndex((color) =>
+                currentClass.includes(color)
+            )
+
+            toggleForm(currentColor)
+        })
+    )
 </script>

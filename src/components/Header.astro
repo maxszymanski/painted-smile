@@ -1,7 +1,8 @@
 ---
 import { Image } from 'astro:assets'
-import logoSmall from '../images/header/logo-name.png'
-import logoBig from '../images/header/logo-name-big.png'
+import '@fontsource/love-ya-like-a-sister'
+import logoSmall from '../images/header/logo-small.png'
+import logoBig from '../images/header/logo-big.png'
 import vectorPink from '../images/header/vector-pink.png'
 import vectorBlue from '../images/header/vector-blue.png'
 
@@ -12,15 +13,15 @@ const link = {
 ---
 
 <header
-    class="relative flex h-[100svh] flex-col items-center justify-center gap-y-12 overflow-hidden bg-bg-small bg-cover bg-center xs:min-h-[500px] sm:min-h-[600px] lg:bg-bg-big"
+    class="relative flex h-[100svh] flex-col items-center justify-center overflow-hidden bg-bg-small bg-cover bg-center px-4 xs:min-h-[500px] lg:bg-bg-big"
 >
     <Image
-        class="absolute -left-2 bottom-2 z-0 hidden h-56 w-56 rotate-12 sm:-top-2 sm:left-4 sm:block sm:h-60 sm:w-60 md:left-10 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
+        class="3xl:h-[34rem] 3xl:w-[34rem] absolute -left-2 bottom-2 z-0 hidden h-56 w-56 rotate-12 sm:-top-2 sm:left-4 sm:block sm:h-60 sm:w-60 md:left-10 md:h-80 md:w-80 lg:h-96 lg:w-96"
         src={vectorPink}
         alt=""
     />
     <Image
-        class="absolute -right-2 bottom-2 z-0 hidden h-56 w-56 xs:block sm:h-60 sm:w-60 md:bottom-6 md:right-2 md:h-80 md:w-80 lg:h-96 lg:w-96 2xl:h-[34rem] 2xl:w-[34rem]"
+        class="3xl:h-[34rem] 3xl:w-[34rem] absolute -right-2 bottom-2 z-0 hidden h-56 w-56 xs:block sm:h-60 sm:w-60 md:bottom-6 md:right-2 md:h-80 md:w-80 lg:h-96 lg:w-96"
         src={vectorBlue}
         alt=""
     />
@@ -30,10 +31,15 @@ const link = {
         alt="Logo firmy"
     />
     <Image
-        class="relative z-10 hidden w-[700px] px-4 xl:mb-4 xl:block"
+        class="relative z-10 hidden w-[700px] px-4 xl:block"
         src={logoBig}
         alt="Logo firmy"
     />
+    <h1
+        class="relative z-20 pb-10 pt-6 text-center font-love text-3xl font-bold uppercase text-mypink lg:pb-16 lg:pt-10 lg:text-5xl xl:pb-20 xl:pt-12 xl:text-6xl"
+    >
+        Animacje dla dzieci
+    </h1>
     <div
         class="relative flex w-full max-w-xs flex-col items-center gap-y-6 px-4 xl:gap-y-8 2xl:max-w-sm"
     >

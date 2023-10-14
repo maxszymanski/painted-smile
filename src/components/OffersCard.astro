@@ -6,7 +6,7 @@ const { bg, icon, altText, title, priceOne, priceTwo, pin, text, className } =
 ---
 
 <div
-    class="relative flex max-w-md flex-col justify-between rounded-xl bg-mycardblue p-4 shadow-[3px_8px_23px_-7px_rgba(203,235,247,1)] sm:p-5 md:min-w-[447px]"
+    class="relative flex max-w-md flex-1 flex-col justify-between rounded-xl bg-mycardblue p-4 shadow-[3px_8px_23px_-7px_rgba(203,235,247,1)] sm:p-5 md:min-w-[447px]"
 >
     <Image src={pin} alt="Pinezka" class="absolute right-1 top-2 w-10" />
     <div class="flex items-center justify-between py-2">
@@ -20,20 +20,20 @@ const { bg, icon, altText, title, priceOne, priceTwo, pin, text, className } =
         </div>
         <h2 class={className}>{title}</h2>
     </div>
-    <p class="py-6 text-lg md:leading-8">{text}</p>
+    <p class="3xl:h-auto py-6 text-lg sm:h-[200px] md:leading-8">{text}</p>
     <div class="space-y-1 md:pt-4">
         <p class="text-lg font-bold">Cena:</p>
         {priceOne && <p>{priceOne}</p>}
         {priceTwo && <p>{priceTwo}</p>}
         {
             !priceOne && !priceTwo && (
-                <p>Cena oraz oferta animacji ustala indywidualnie</p>
+                <p>Cena oraz oferta animacji ustalana indywidualnie</p>
             )
         }
     </div>
     <div class="mt-auto flex w-full items-center justify-between pb-4 pt-7">
         <button
-            class="rounded-xl bg-myorder px-6 py-2 text-xl text-white transition-colors duration-300 hover:bg-myspiritblue focus:outline-none focus:ring focus:ring-myspiritblue focus:ring-offset-2"
+            class="order-btn rounded-xl bg-myorder px-6 py-2 text-xl text-white transition-colors duration-300 hover:bg-myspiritblue focus:outline-none focus:ring focus:ring-myspiritblue focus:ring-offset-2"
             >Zamawiam</button
         >
         <button
