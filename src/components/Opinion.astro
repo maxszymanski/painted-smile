@@ -3,7 +3,7 @@ const { name, opinion, date } = Astro.props
 ---
 
 <div
-    class="odd:bg-opinionblue flex w-[90%] shrink-0 overflow-hidden rounded-xl p-5 even:bg-[#fdfdfd] md:cursor-grab"
+    class="flex w-[90%] shrink-0 overflow-hidden rounded-xl p-5 odd:bg-opinionblue even:bg-mycardblue lg:w-full xl:px-6"
 >
     <div class="flex h-full flex-col">
         <p class="text-xl tracking-wide text-[#81849C]">{name}</p>
@@ -11,3 +11,5 @@ const { name, opinion, date } = Astro.props
         <p class="mt-auto tracking-wide text-[#81849C]">{date}</p>
     </div>
 </div>
+
+<!-- even:bg-[#fdfdfd] -->

@@ -1,27 +1,71 @@
 ---
+import { Image } from 'astro:assets'
 import data from '../data/opinions.js'
 import Opinion from './Opinion.astro'
+import up from '../images/footer/up.png'
+import down from '../images/footer/down.png'
 ---
 
 <section class="bg-mycardblue py-12 lg:py-16 xl:py-24">
     <div class="container mx-auto">
         <h2
-            class="mb-12 p-4 text-4xl font-medium text-myblue md:px-8 lg:text-5xl xl:mb-20 2xl:text-6xl"
+            class="mb-12 pl-4 text-4xl font-medium text-myblue md:pl-8 lg:text-5xl xl:mb-20 2xl:text-6xl 3xl:pl-0"
         >
             Co klienci piszą
         </h2>
-    </div>
-    <div>
-        <div class="flex overflow-x-auto py-6 pl-4">
-            {
-                data.map((item) => (
-                    <Opinion
-                        name={item.name}
-                        opinion={item.opinion}
-                        date={item.date}
-                    />
-                ))
-            }
+
+        <div
+            class="ms-auto pl-4 lg:flex lg:items-center lg:justify-between lg:px-8"
+        >
+            <div
+                class="opinions scrollbar-thin flex overflow-x-auto scroll-smooth py-6 pr-0 lg:h-[585px] lg:flex-col 2xl:h-[630px] 2xl:px-12"
+            >
+                {
+                    data.map((item) => (
+                        <Opinion
+                            name={item.name}
+                            opinion={item.opinion}
+                            date={item.date}
+                        />
+                    ))
+                }
+            </div>
+            <div
+                class="hidden flex-col items-start justify-center gap-8 lg:flex lg:px-6"
+            >
+                <button
+                    class="up p-2 outline-none transition-all hover:scale-[0.97] focus:drop-shadow-[0px_0px_14px_rgb(233,117,15)]"
+                    ><Image
+                        src={up}
+                        alt="strzałka w górę"
+                        class="m-2"
+                    /></button
+                >
+                <button
+                    class="down p-2 outline-none transition-all hover:scale-[0.97] focus:drop-shadow-[0px_0px_14px_rgb(233,117,15)]"
+                    ><Image
+                        src={down}
+                        alt="strzałka w dół"
+                        class="m-2"
+                    /></button
+                >
+            </div>
         </div>
     </div>
 </section>
+
+<script>
+    const opinions = document.querySelector('.opinions')
+    const btnUp = document.querySelector('.up')
+    const btnDown = document.querySelector('.down')
+
+    const scrollView = (direction: boolean) => {
+        if (direction) {
+            opinions.scrollTop -= 180
+        } else {
+            opinions.scrollTop += 180
+        }
+    }
+    btnUp.addEventListener('click', () => scrollView(true))
+    btnDown.addEventListener('click', () => scrollView(false))
+</script>
