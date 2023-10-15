@@ -26,6 +26,8 @@ module.exports = {
                 santa: "url('/src/images/aboutus/santa.webp')",
                 fun: "url('/src/images/aboutus/fun.webp')",
                 about: "url('/src/images/aboutus/about.webp')",
+                'footer-big': "url('/src/images/footer/footer-big.png')",
+                'footer-small': "url('/src/images/footer/footer-small.png')",
             },
             colors: {
                 mypink: '#FF8DA6',
@@ -49,6 +51,7 @@ module.exports = {
                 formgreen: '#A7D6B1',
                 formred: '#FA7878',
                 formbtn: '#FFBF1D',
+                opinionblue: '#E5EEF0',
             },
         },
     },

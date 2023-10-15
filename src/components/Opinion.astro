@@ -1,0 +1,13 @@
+---
+const { name, opinion, date } = Astro.props
+---
+
+<div
+    class="odd:bg-opinionblue flex w-80 shrink-0 overflow-hidden rounded-xl p-4 even:bg-[#fdfdfd]"
+>
+    <div class="flex h-full flex-col">
+        <p class="text-xl tracking-wide text-[#81849C]">{name}</p>
+        <p class="my-6 text-lg leading-[170%] text-myblue">{opinion}</p>
+        <p class="mt-auto tracking-wide text-[#81849C]">{date}</p>
+    </div>
+</div>
