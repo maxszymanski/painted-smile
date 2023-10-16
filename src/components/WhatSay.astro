@@ -4,10 +4,12 @@ import data from '../data/opinions.js'
 import Opinion from './Opinion.astro'
 import up from '../images/footer/up.png'
 import down from '../images/footer/down.png'
+import footerBig from '../images/footer/footer-big.png'
+import footerSmall from '../images/footer/footer-small.png'
 ---
 
-<section class="bg-mycardblue py-12 lg:py-16 xl:py-24">
-    <div class="container mx-auto">
+<section class="bg-mycardblue">
+    <div class="container mx-auto py-12 lg:py-16 xl:py-24">
         <h2
             class="mb-12 pl-4 text-4xl font-medium text-myblue md:pl-8 lg:text-5xl xl:mb-20 2xl:text-6xl 3xl:pl-0"
         >
@@ -18,7 +20,7 @@ import down from '../images/footer/down.png'
             class="ms-auto pl-4 lg:flex lg:items-center lg:justify-between lg:px-8"
         >
             <div
-                class="opinions scrollbar-thin flex overflow-x-auto scroll-smooth py-6 pr-0 lg:h-[585px] lg:flex-col 2xl:h-[630px] 2xl:px-12"
+                class="opinions flex overflow-x-auto scroll-smooth py-6 pr-0 scrollbar scrollbar-track-opinionblue scrollbar-thumb-mylightblue scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-w-0 scrollbar-h-0 lg:h-[585px] lg:flex-col 2xl:h-[630px] 2xl:px-12"
             >
                 {
                     data.map((item) => (
@@ -34,7 +36,7 @@ import down from '../images/footer/down.png'
                 class="hidden flex-col items-start justify-center gap-8 lg:flex lg:px-6"
             >
                 <button
-                    class="up p-2 outline-none transition-all hover:scale-[0.97] focus:drop-shadow-[0px_0px_14px_rgb(233,117,15)]"
+                    class="up flex items-center justify-center p-2 outline-none transition-all hover:scale-[0.95] focus:drop-shadow-[0px_0px_14px_rgb(233,117,15)]"
                     ><Image
                         src={up}
                         alt="strzałka w górę"
@@ -42,7 +44,7 @@ import down from '../images/footer/down.png'
                     /></button
                 >
                 <button
-                    class="down p-2 outline-none transition-all hover:scale-[0.97] focus:drop-shadow-[0px_0px_14px_rgb(233,117,15)]"
+                    class="down flex items-center justify-center p-2 outline-none transition-all hover:scale-[0.95] focus:drop-shadow-[0px_0px_14px_rgb(233,117,15)]"
                     ><Image
                         src={down}
                         alt="strzałka w dół"
@@ -52,6 +54,8 @@ import down from '../images/footer/down.png'
             </div>
         </div>
     </div>
+    <Image src={footerSmall} alt="" class="-mb-5 w-screen lg:hidden" />
+    <Image src={footerBig} alt="" class="-mb-5 hidden w-screen lg:block" />
 </section>
 
 <script>
@@ -60,12 +64,13 @@ import down from '../images/footer/down.png'
     const btnDown = document.querySelector('.down')
 
     const scrollView = (direction: boolean) => {
-        if (direction) {
-            opinions.scrollTop -= 180
-        } else {
-            opinions.scrollTop += 180
-        }
+        direction ? (opinions.scrollTop -= 183) : (opinions.scrollTop += 183)
     }
     btnUp.addEventListener('click', () => scrollView(true))
     btnDown.addEventListener('click', () => scrollView(false))
 </script>
+
+<!-- <div
+    class="scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-h-0.5 scrollbar-w-1 scrollbar-track-mylightblue scrollbar-thumb-myorder"
+>
+</div> -->
