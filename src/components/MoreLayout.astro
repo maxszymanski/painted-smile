@@ -1,0 +1,22 @@
+---
+import MoreBirthday from './MoreBirthday.astro'
+import MoreWedding from './MoreWedding.astro'
+---
+
+<div
+    class="overlay inset-0 z-20 hidden min-h-[100svh] w-full sm:bg-slate-200/70"
+>
+</div>
+
+<div
+    class="more-layout 0 left-1/2 top-1/2 z-30 hidden h-full w-full max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-auto bg-mycardblue p-8 scrollbar scrollbar-track-opinionblue scrollbar-thumb-mylightblue scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-w-1.5"
+>
+    <div class="flex flex-row-reverse lg:pt-6">
+        <button
+            class="close-more relative rounded-xl bg-mylightblue px-3 py-1.5 text-center text-xl tracking-wide text-myblue transition-colors duration-300 hover:bg-myorder focus:outline-none focus:ring focus:ring-myblue focus:ring-offset-2 lg:text-2xl"
+            >← Zamknij
+        </button>
+    </div>
+    <MoreBirthday />
+    <MoreWedding />
+</div>

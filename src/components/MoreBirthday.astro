@@ -1,0 +1,51 @@
+---
+const birthday = {
+    title1: 'Animacje Artystyczne',
+    title2: 'Zabawy i Konkursy',
+    title3: 'Bańki Mydlane',
+    title4: 'Kolorowe piniaty',
+    info1: ' Nasz zespół doświadczonych artystów zabierze dzieci w magiczny świat kreatywności. Malowanie twarzy, rysowanie na balonach, tworzenie ręcznie robionych ozdób - wszystko to dostępne na urodzinach Twojego dziecka.',
+    info2: ' Organizujemy pełen energii zabawy i konkursy, które zachęcą dzieci do współpracy i wspólnej zabawy.',
+    info3: ' Nasz zespół zapewni dzieciom fascynującą prezentację bańkowych sztuczek i stworzy ogromne bańki mydlane, które rozbłysną kolorami.',
+    info4: ' kolorowe piñaty są idealnym rozwiązaniem! Przynieś odrobinę hiszpańskiej tradycji i radości na swoją imprezę dzięki tym ręcznie wykonanym dziełom sztuki. Nasze kolorowe piñaty są idealnym rozwiązaniem! Przynieś odrobinę hiszpańskiej tradycji i radości na swoją imprezę dzięki tym ręcznie wykonanym dziełom sztuki.',
+}
+const atractions = {
+    atr1: 'Warsztaty żelek - 20 zł/ dziecko.',
+    atr2: 'Warsztaty tworzenia mydełek - 15 zł/dziecko.',
+    atr3: 'Urodzinki tematyczne - 1 animator do 10 dzieci 250/h, 2 animatorów 300zł/h.',
+    atrInfo1:
+        ' Czy kochasz żelki? A co powiesz na to, że możesz je teraz robić samodzielnie? Zapraszamy na nasze warsztaty tworzenia żelków, gdzie odkryjesz tajniki przygotowywania tych pysznych, elastycznych i kolorowych słodyczy.',
+    atrInfo2:
+        ' Warsztaty Tworzenia Mydełek Dla Dzieci - Kreatywna Przygoda z Rękodziełem. To wyjątkowa okazja dla dzieci, aby odkryć świat rękodzieła, eksperymentować z kolorami, zapachami i stworzyć własne, kolorowe mydełka.',
+    atrInfo3:
+        ' Animacje tematyczne na urodzinach dziecka to doskonały sposób, aby uczynić tę okazję jeszcze bardziej niezapomnianą. Oto kilka popularnych tematów animacji, które możesz rozważyć:',
+}
+const { title1, title2, title3, title4, info1, info2, info3, info4 } = birthday
+const { atr1, atr2, atr3, atrInfo1, atrInfo2, atrInfo3 } = atractions
+---
+
+<div class="more hidden">
+    <div class="space-y-5 pt-8 text-lg lg:pt-0">
+        <h4 class="pb-2 text-2xl font-semibold text-myorder">Cena zawiera:</h4>
+        <p class="py-2 font-semibold">{title1}</p>
+        <p class="leading-[170%]">{info1}</p>
+        <p class="py-2 font-semibold">{title2}</p>
+        <p class="leading-[170%]">{info2}</p>
+        <p class="py-2 font-semibold">{title3}</p>
+        <p class="leading-[170%]">{info3}</p>
+        <p class="py-2 font-semibold">{title4}</p>
+        <p class="leading-[170%]">{info4}</p>
+    </div>
+    <div class="space-y-6 py-12 pb-5 text-lg">
+        <h4 class="text-2xl font-semibold text-cardpink">
+            Atrakcje dodatkowe:
+        </h4>
+        <p class="py-2 font-semibold">{atr1}</p>
+        <p class="leading-[170%]">{atrInfo1}</p>
+        <p class="py-2 font-semibold">{atr2}</p>
+        <p class="leading-[170%]">{atrInfo2}</p>
+        <p class="py-2 font-semibold">{atr3}</p>
+        <p class="leading-[170%]">{atrInfo3}</p>
+        <p></p>
+    </div>
+</div>

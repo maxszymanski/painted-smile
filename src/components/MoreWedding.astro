@@ -1,0 +1,55 @@
+---
+const weeding = {
+    title1: 'Animacje Artystyczne',
+    title2: 'Kącik Kreatywny',
+    title3: 'Zabawy Zespołowe',
+    title4: 'Malowanie Twarzy i Tymczasowe Tatuaże:',
+    info1: ' Nasz doświadczony zespół animatorów zajmuje się dziećmi, organizując gry, zabawy, i konkursy dostosowane do wieku i zainteresowań maluchów.',
+    info2: ' Tworzymy kącik, w którym dzieci mogą malować, rysować, tworzyć ozdoby, i wyrażać swoją kreatywność. Wszystkie materiały są dostarczane.',
+    info3: ' Organizujemy zabawy zespołowe, które promują współpracę i integrację między dziećmi. To doskonała okazja do nawiązywania nowych przyjaźni.',
+    info4: ' Nasi artyści malują twarze dzieci oraz oferują tymczasowe tatuaże, które są bezpieczne dla skóry i łatwe do zmycia.',
+}
+const atractions = {
+    atr1: 'Warsztaty żelek - 20 zł/ dziecko.',
+    atr2: 'Warsztaty tworzenia mydełek - 15 zł/dziecko.',
+    atr3: 'Bajkowy Przedstawiciel - 50zł.',
+    atr4: 'Pokaz baniek ogniowych- 50zł.',
+    atrInfo1:
+        ' Czy kochasz żelki? A co powiesz na to, że możesz je teraz robić samodzielnie? Zapraszamy na nasze warsztaty tworzenia żelków, gdzie odkryjesz tajniki przygotowywania tych pysznych, elastycznych i kolorowych słodyczy.',
+    atrInfo2:
+        ' Warsztaty Tworzenia Mydełek Dla Dzieci - Kreatywna Przygoda z Rękodziełem. To wyjątkowa okazja dla dzieci, aby odkryć świat rękodzieła, eksperymentować z kolorami, zapachami i stworzyć własne, kolorowe mydełka.',
+    atrInfo3:
+        ' Nasz przyjazny bajkowy przedstawiciel, czyli minionek bawi się i tańczy z dziećmi oraz robi zdjęcia.',
+    atrInfo4:
+        ' Pokaz baniek ogniowych na weselu to niezwykle uroczy pomysł, który może dodać magii i zabawy wszystkim dzieciakom.',
+}
+const { title1, title2, title3, title4, info1, info2, info3, info4 } = weeding
+const { atr1, atr2, atr3, atr4, atrInfo1, atrInfo2, atrInfo3, atrInfo4 } =
+    atractions
+---
+
+<div class="more">
+    <div class="space-y-5 pt-8 text-lg lg:pt-0">
+        <h4 class="pb-2 text-2xl font-semibold text-myorder">Cena zawiera:</h4>
+        <p class="py-2 font-semibold">{title1}</p>
+        <p class="leading-[170%] tracking-wide">{info1}</p>
+        <p class="py-2 font-semibold">{title2}</p>
+        <p class="leading-[170%] tracking-wide">{info2}</p>
+        <p class="py-2 font-semibold">{title3}</p>
+        <p class="leading-[170%] tracking-wide">{info3}</p>
+        <p class="py-2 font-semibold">{title4}</p>
+        <p class="leading-[170%] tracking-wide">{info4}</p>
+    </div>
+    <div class="space-y-6 py-12 pb-5 text-lg">
+        <h4 class="text-2xl font-semibold text-cardpink">
+            Atrakcje dodatkowe:
+        </h4>
+        <p class="py-2 font-semibold">{atr1}</p>
+        <p class="leading-[170%] tracking-wide">{atrInfo1}</p>
+        <p class="py-2 font-semibold">{atr2}</p>
+        <p class="leading-[170%] tracking-wide">{atrInfo2}</p>
+        <p class="py-2 font-semibold">{atr3}</p>
+        <p class="leading-[170%] tracking-wide">{atrInfo3}</p>
+        <p></p>
+    </div>
+</div>

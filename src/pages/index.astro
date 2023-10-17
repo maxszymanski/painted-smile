@@ -2,9 +2,30 @@
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/Header.astro'
 import Main from '../components/Main.astro'
+import MoreLayout from '../components/MoreLayout.astro'
 ---
 
 <Layout title="Malowany Uśmiech | Animacje dla dzieci" mainPage={true}>
     <Header />
     <Main />
+    <MoreLayout />
 </Layout>
+
+<script>
+    const overlay = document.querySelector('.overlay')
+    const moreLayout = document.querySelector('.more-layout')
+    const moreBtns = document.querySelectorAll('.more-btn')
+    const closeBtn = document.querySelector('.close-more')
+    function showMore() {
+        overlay.classList.toggle('hidden')
+        overlay.classList.toggle('fixed')
+        moreLayout.classList.toggle('hidden')
+        moreLayout.classList.toggle('fixed')
+        document.body.classList.toggle('overflow-hidden')
+    }
+    const closeMore = () => {
+        showMore()
+    }
+    moreBtns.forEach((btn) => btn.addEventListener('click', showMore))
+    closeBtn.addEventListener('click', closeMore)
+</script>

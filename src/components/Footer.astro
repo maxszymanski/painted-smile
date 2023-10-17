@@ -1,11 +1,47 @@
 ---
 import FooterContact from './FooterContact.astro'
+import FooterSocials from './FooterSocials.astro'
+import FooterWhere from './FooterWhere.astro'
+
+const currentDate = new Date().getFullYear()
 ---
 
 <footer class="bg-myblue">
-    <div
-        class="container mx-auto flex flex-col items-center p-4 text-stone-100"
-    >
-        <FooterContact />
+    <div class="container mx-auto">
+        <div
+            class="flex flex-col items-center border-b-[1px] border-stone-200 p-4 text-stone-100 xs:px-8 xs:pt-8 sm:flex-row sm:flex-wrap sm:items-start sm:justify-evenly"
+        >
+            <FooterContact />
+            <FooterSocials />
+            <FooterWhere />
+        </div>
+        <div
+            class="flex flex-col items-center justify-evenly px-4 pb-1 pt-3 font-exo text-xs text-stone-200 xs:flex-row xs:flex-wrap"
+        >
+            <p class="sm:order-last">
+                Projekt: <a
+                    href="https://www.behance.net/art_zhuravlov"
+                    rel="noopener"
+                    target="_blank"
+                    class="transition-colors duration-300 hover:text-mypink focus:text-mypink focus:outline-none"
+                    >Artem Zhuravlov</a
+                >
+            </p>
+
+            <p class="my-1">
+                Wdrożenie: <a
+                    href="https://github.com/maxszymanski"
+                    rel="noopener"
+                    target="_blank"
+                    class="transition-colors duration-300 hover:text-mypink focus:text-mypink focus:outline-none"
+                    >Max Szymański</a
+                >
+            </p>
+
+            <p>
+                &copy;<span id="footer-date">{currentDate}</span> Malowany
+                Uśmiech
+            </p>
+        </div>
     </div>
 </footer>
