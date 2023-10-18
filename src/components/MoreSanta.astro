@@ -1,0 +1,28 @@
+---
+const santa = {
+    title1: 'Wizyta Świętego Mikołaja w Domu',
+    title2: 'Przybycie Mikołaja na Imprezie',
+    title3: 'Wsparcie w Organizacji',
+    title4: 'Bezpieczeństwo i Profesjonalizm',
+    info1: ' Święty Mikołaj odwiedzi Wasz dom i spotka się z dziećmi, aby wysłuchać ich życzeń i wręczyć prezenty. Dzieci będą miały okazję porozmawiać z Mikołajem i podzielić się swoimi marzeniami.',
+    info2: ' Jeśli planujecie świąteczną imprezę lub spotkanie rodzinne, Święty Mikołaj może być gościem specjalnym. Będzie rozdawać prezenty, robić zdjęcia i dzielić się opowieściami o pracach przygotowawczych w Laponi.',
+    info3: ' Pomagamy dostosować wizytę Mikołaja do Waszych potrzeb, w tym ustalamy termin, miejsce i szczegóły wizyty.',
+    info4: ' Nasz Mikołaj jest bardzo profesjonalny i napewno dostarczy dzieciom niezapomniane wrażenia.',
+}
+
+const { title1, title2, title3, title4, info1, info2, info3, info4 } = santa
+---
+
+<div class="more hidden pb-12 pr-4 md:pb-6 md:pr-6">
+    <div class="space-y-5 pt-8 text-lg lg:pt-0">
+        <h4 class="pb-2 text-2xl font-semibold text-myorder">Cena zawiera:</h4>
+        <p class="py-2 font-semibold">{title1}</p>
+        <p class="leading-[170%] tracking-wide">{info1}</p>
+        <p class="py-2 font-semibold">{title2}</p>
+        <p class="leading-[170%] tracking-wide">{info2}</p>
+        <p class="py-2 font-semibold">{title3}</p>
+        <p class="leading-[170%] tracking-wide">{info3}</p>
+        <p class="py-2 font-semibold">{title4}</p>
+        <p class="leading-[170%] tracking-wide">{info4}</p>
+    </div>
+</div>

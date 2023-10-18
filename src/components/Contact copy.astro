@@ -1,0 +1,128 @@
+---
+
+---
+
+<div
+    class="overlay inset-0 z-20 hidden min-h-[100svh] w-full sm:bg-slate-200/70"
+>
+</div>
+
+ left-1/2 top-1/2 z-30 hidden h-full w-full max-w-3xl -translate-x-1/2 -translate-y-1/2
+
+
+<div
+    id="form"
+    class="fixed inset-0 z-40 hidden min-h-[100svh] w-full items-center justify-center sm:bg-slate-200/70"
+>
+    <form
+        class="relative flex h-full w-full max-w-md flex-col justify-center space-y-4 overflow-y-auto p-4 xs:p-8 sm:h-fit sm:space-y-5 sm:rounded-xl"
+    >
+        <h3 class="title text-center text-lg xs:text-xl">
+            Zostaw swój kontakt - oddzwonimy
+        </h3>
+        <div class="w-full px-2">
+            <input
+                class="w-full rounded-xl p-2 font-exo transition-colors duration-300 focus:bg-slate-100 focus:outline-none focus:ring focus:ring-slate-200 focus:ring-offset-2 xs:p-4"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Imię"
+                required
+                autocomplete="off"
+            />
+            <p class="hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora, repellat.
+            </p>
+        </div>
+        <div class="w-full px-2">
+            <input
+                class="w-full rounded-xl p-2 font-exo transition-colors duration-300 focus:bg-slate-100 focus:outline-none focus:ring focus:ring-slate-200 focus:ring-offset-2 xs:p-4"
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Numer telefonu"
+                required
+                autocomplete="off"
+            />
+        </div>
+        <div class="w-full px-2">
+            <input
+                class="w-full rounded-xl p-2 font-exo transition-colors duration-300 focus:bg-slate-100 focus:outline-none focus:ring focus:ring-slate-200 focus:ring-offset-2 xs:p-4"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Adres email (opcjonalnie)"
+                autocomplete="off"
+            />
+        </div>
+        <div class="px-2">
+            <textarea
+                name="message"
+                placeholder="Twoja wiadomość"
+                autocomplete="off"
+                class="w-full rounded-xl p-2 pb-6 font-exo transition-colors duration-300 focus:bg-slate-100 focus:outline-none focus:ring focus:ring-slate-200 focus:ring-offset-2 xs:p-4 xs:pb-28 sm:pb-20"
+            ></textarea>
+        </div>
+        <button
+            type="button"
+            class="close-form text absolute -top-6 right-0 hidden px-4 text-5xl text-white focus:outline-none xs:text-6xl md:block"
+            >&times</button
+        >
+        <div class="flex flex-col items-center gap-y-3">
+            <button
+                class="submit w-full rounded-xl p-2 font-semibold tracking-widest text-white ring-current transition duration-300 focus:outline-none focus:ring focus:ring-offset-2 xs:text-lg"
+                >Wyślij</button
+            >
+            <button
+                type="button"
+                class="close-form close w-full rounded-xl bg-white p-2 font-semibold tracking-widest transition-colors duration-300 hover:bg-slate-100 focus:bg-slate-100 focus:outline-none focus:ring focus:ring-slate-200 focus:ring-offset-2 xs:text-lg"
+                >Anuluj</button
+            >
+        </div>
+        <p class="info text-center xs:text-lg">
+            Lub zadzwoń na numer <a
+                href="tel:+48513955558"
+                class="transition-colors duration-300 hover:text-mypink focus:text-mypink focus:outline-none"
+                >513-955-558</a
+            >, chętnie odpowiemy na wszystkie pytania. <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-mood-smile mb-0.5 inline"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 10l.01 0"></path>
+                <path d="M15 10l.01 0"></path>
+                <path d="M9.5 15a3.5 3.5 0 0 0 5 0"></path>
+            </svg>
+        </p>
+    </form>
+</div>
+<style>
+    .blue:hover {
+        background-color: #33b6d6;
+    }
+    .red:hover {
+        background-color: #e94064;
+    }
+    .yellow:hover {
+        background-color: #f1b00c;
+    }
+    .orange:hover {
+        background-color: #f07911;
+    }
+    .green:hover {
+        background-color: #56c26c;
+    }
+    .santa:hover {
+        background-color: #e24242;
+    }
+</style>

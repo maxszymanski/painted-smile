@@ -9,6 +9,8 @@ module.exports = {
             ...defaultTheme.screens,
             '3xl': '1600px',
             ...defaultTheme.screens,
+            xmd: '850px',
+            ...defaultTheme.screens,
         },
         extend: {
             fontFamily: {

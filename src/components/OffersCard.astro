@@ -1,8 +1,18 @@
 ---
 import '@fontsource/love-ya-like-a-sister'
 import { Image } from 'astro:assets'
-const { bg, icon, altText, title, priceOne, priceTwo, pin, text, className } =
-    Astro.props
+const {
+    bg,
+    icon,
+    altText,
+    title,
+    priceOne,
+    priceTwo,
+    pin,
+    text,
+    className,
+    more = true,
+} = Astro.props
 ---
 
 <div
@@ -36,11 +46,13 @@ const { bg, icon, altText, title, priceOne, priceTwo, pin, text, className } =
             class="order-btn rounded-xl bg-myorder px-6 py-2 text-xl text-white transition-colors duration-300 hover:bg-myspiritblue focus:outline-none focus:ring focus:ring-myspiritblue focus:ring-offset-2"
             >Zamawiam</button
         >
-        <button
-            class="more-btn rounded-xl bg-more-btn bg-center px-6 py-2 text-lg transition duration-300 hover:drop-shadow-[0px_0px_14px_rgb(255,141,161)] focus:outline-none focus:drop-shadow-[0px_0px_14px_rgb(255,141,161)] xs:px-8"
-        >
-            Więcej &rarr;
-        </button>
+        {
+            more && (
+                <button class="more-btn rounded-xl bg-more-btn bg-center px-6 py-2 text-lg transition duration-300 hover:drop-shadow-[0px_0px_14px_rgb(255,141,161)] focus:outline-none focus:drop-shadow-[0px_0px_14px_rgb(255,141,161)] xs:px-8">
+                    Więcej <span class="mb-2">&rarr;</span>
+                </button>
+            )
+        }
     </div>
 </div>
 

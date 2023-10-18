@@ -5,7 +5,15 @@ import Main from '../components/Main.astro'
 import MoreLayout from '../components/MoreLayout.astro'
 ---
 
-<Layout title="Malowany Uśmiech | Animacje dla dzieci" mainPage={true}>
+<Layout
+    title="Malowany Uśmiech | Animacje dla dzieci"
+    mainPage={true}
+    ogTitle="Malowany Uśmiech | Animacje Dla Dzieci"
+    ogDescription="Zajmujemy się profesjonalną organizacją animacji dla dzieci na urodzinach, weselach, balach i piknikach. Skontaktuj się z nami, aby stworzyć niezapomniane wspomnienia dla Twojego dziecka!"
+    ogImage="link"
+    ogUrl="https://malowanyusmiech.pl"
+    description="Szukasz animatora dla dzieci na urodziny lub inną okazję? Skontaktuj się z nami, a my stworzymy niezapomniane wspomnienia dla Twojego dziecka!"
+>
     <Header />
     <Main />
     <MoreLayout />
@@ -15,17 +23,31 @@ import MoreLayout from '../components/MoreLayout.astro'
     const overlay = document.querySelector('.overlay')
     const moreLayout = document.querySelector('.more-layout')
     const moreBtns = document.querySelectorAll('.more-btn')
+    const moreInfo = document.querySelectorAll('.more')
     const closeBtn = document.querySelector('.close-more')
-    function showMore() {
-        overlay.classList.toggle('hidden')
-        overlay.classList.toggle('fixed')
-        moreLayout.classList.toggle('hidden')
-        moreLayout.classList.toggle('fixed')
-        document.body.classList.toggle('overflow-hidden')
+    function showMore(index: number) {
+        overlay.classList.remove('hidden')
+        overlay.classList.add('fixed')
+        moreLayout.classList.remove('hidden')
+        moreLayout.classList.add('fixed')
+        document.body.classList.add('overflow-hidden')
+        moreInfo[index].classList.remove('hidden')
+        moreInfo[index].classList.add('fixed')
     }
     const closeMore = () => {
-        showMore()
+        moreInfo.forEach((btn) => {
+            if (!btn.classList.contains('fixed')) return
+            btn.classList.remove('fixed')
+            btn.classList.add('hidden')
+        })
+        document.body.classList.remove('overflow-hidden')
+        overlay.classList.add('hidden')
+        overlay.classList.remove('fixed')
+        moreLayout.classList.add('hidden')
+        moreLayout.classList.remove('fixed')
     }
-    moreBtns.forEach((btn) => btn.addEventListener('click', showMore))
+    moreBtns.forEach((btn, index) =>
+        btn.addEventListener('click', () => showMore(index))
+    )
     closeBtn.addEventListener('click', closeMore)
 </script>

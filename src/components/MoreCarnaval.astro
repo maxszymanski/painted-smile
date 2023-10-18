@@ -1,0 +1,29 @@
+---
+const christening = {
+    title1: 'Profesjonalni Animatorzy Kostiumowi',
+    title2: 'Pokaz Taneczny i Konkursy',
+    title3: 'Bajkowy Przedstawiciel',
+    title4: 'Profesjonalne nagłośnienie',
+    info1: ' Nasz zespół składa się z profesjonalnych animatorów przebranych za ulubione postacie z bajek i baśni. Dzieci mogą spotkać swoich ulubionych bohaterów, rozmawiać z nimi i robić zdjęcia.',
+    info2: ' Przygotowujemy interaktywny pokaz taneczny dostosowany do wieku dzieci, który zachęci je do tańczenia i uczestniczenia w zabawach.',
+    info3: ' Nasz przyjazny bajkowy przedstawiciel, czyli minionek bawi się i tańczy z dziećmi oraz robi zdjęcia.',
+    info4: ' Zapewniamy również profesjonalne nagłośnienie, które wzbogaci każdą chwilę podczas naszych wydarzeń.',
+}
+
+const { title1, title2, title3, title4, info1, info2, info3, info4 } =
+    christening
+---
+
+<div class="more hidden pb-12 pr-4 md:pr-6">
+    <div class="space-y-5 pt-8 text-lg lg:pt-0">
+        <h4 class="pb-2 text-2xl font-semibold text-myorder">Cena zawiera:</h4>
+        <p class="py-2 font-semibold">{title1}</p>
+        <p class="leading-[170%] tracking-wide">{info1}</p>
+        <p class="py-2 font-semibold">{title2}</p>
+        <p class="leading-[170%] tracking-wide">{info2}</p>
+        <p class="py-2 font-semibold">{title3}</p>
+        <p class="leading-[170%] tracking-wide">{info3}</p>
+        <p class="py-2 font-semibold">{title4}</p>
+        <p class="leading-[170%] tracking-wide">{info4}</p>
+    </div>
+</div>

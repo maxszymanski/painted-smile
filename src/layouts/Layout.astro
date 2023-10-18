@@ -3,17 +3,25 @@ import '@fontsource/atma'
 import Nav from '../components/Nav.astro'
 import Contact from '../components/Contact.astro'
 import Footer from '../components/Footer.astro'
-interface Props {
-    title: string
-    mainPage: boolean
-}
-const { title, mainPage } = Astro.props
+
+const { title, mainPage, ogTitle, ogDescription, ogImage, ogUrl, description } = Astro.props
 ---
 
 <html lang="en" class="scroll-smooth">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="description" content="Astro description" />
+        {!mainPage && <meta name="robots" content="noindex" />}
+        <meta
+            name="description"
+            content={description}
+        />
+        <meta
+            name="keywords"
+            content="animacje dla dzieci, urodziny, wesela, bale, pikniki, zabawy dla dzieci, animacje tematyczne, atrakcje dla dzieci, wizyta Mikołaja, święty Mikołaj"
+        />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={ogUrl} />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/x-icon" sizes="16x16" href="/icon-s.ico" />
         <link rel="icon" type="image/x-icon" sizes="32x32" href="/icon-b.ico" />
@@ -29,11 +37,11 @@ const { title, mainPage } = Astro.props
 </html>
 
 <script>
-    const form = document.querySelector('#form')
+    const overlay = document.querySelector('.overlay')
+    const form = document.querySelector('.form')
     const body = document.querySelector('.body')
     const ordersBtn = document.querySelectorAll('.order-btn')
     const closeForm = document.querySelectorAll('.close-form')
-
     const formColors = [
         {
             bg: 'bg-myorder',
@@ -80,18 +88,28 @@ const { title, mainPage } = Astro.props
     ]
 
     const toggleForm = (index: number) => {
-        const formBtn = form.querySelector('form').querySelector('.submit')
-        const titleForm = form.querySelector('form').querySelector('.title')
-        const infoForm = form.querySelector('form').querySelector('.info')
-        const inputs = form.querySelector('form').querySelectorAll('.focus')
-        form.firstElementChild.classList.toggle(formColors[index].bg)
+        const formBtn = form.querySelector('.submit')
+        const titleForm = form.querySelector('.title')
+        const infoForm = form.querySelector('.info')
+        console.log(form)
+        form.classList.toggle(formColors[index].bg)
         formBtn.classList.toggle(formColors[index].button)
         formBtn.classList.toggle(formColors[index].hover)
         titleForm.classList.toggle(formColors[index].text)
         infoForm.classList.toggle(formColors[index].text)
         form.classList.toggle('hidden')
-        form.classList.toggle('flex')
+        form.classList.toggle('fixed')
         body.classList.toggle('overflow-hidden')
+        overlay.classList.toggle('hidden')
+        overlay.classList.toggle('fixed')
+        centerForm()
+    }
+    const centerForm = () => {
+        if (window.innerHeight >= 840) {
+            form.classList.add('flex')
+        } else {
+            form.classList.remove('flex')
+        }
     }
 
     ordersBtn.forEach((btn, index) =>
@@ -99,7 +117,7 @@ const { title, mainPage } = Astro.props
     )
     closeForm.forEach((btn) =>
         btn.addEventListener('click', () => {
-            const currentClass = form.firstElementChild.className
+            const currentClass = form.className
             const bgs = formColors.map((item) => item.bg)
 
             const currentColor = bgs.findIndex((color) =>

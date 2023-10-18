@@ -1,0 +1,29 @@
+---
+const christening = {
+    title1: 'Animatorzy Dla Dzieci',
+    title2: 'Kącik Kreatywny',
+    title3: 'Konkursy i Zabawy',
+    title4: 'Malowanie Twarzy',
+    info1: ' Nasi doświadczeni animatorzy dostarczą dzieciom pełen uśmiechu i radości program animacyjny. Zabawy, konkursy, i gry dostosowane do wieku uczestników sprawią, że dzieci będą miały mnóstwo zabawy.',
+    info2: ' Tworzymy kącik kreatywny, w którym dzieci mogą malować, tworzyć ozdoby, czy robić biżuterię. To doskonała okazja do wyrażenia swojej kreatywności.',
+    info3: ' Organizujemy konkursy z nagrodami, zabawy sportowe i wiele innych atrakcji, które zachęcają dzieci do wspólnej zabawy i rywalizacji.',
+    info4: ' Nasi artyści do malowania twarzy pomalują dzieci w ulubione wzory i postacie, które sprawią im radość przez całą uroczystość.',
+}
+
+const { title1, title2, title3, title4, info1, info2, info3, info4 } =
+    christening
+---
+
+<div class="more hidden pb-12 pr-4 md:pb-6 md:pr-6">
+    <div class="space-y-5 pt-8 text-lg lg:pt-0">
+        <h4 class="pb-2 text-2xl font-semibold text-myorder">Cena zawiera:</h4>
+        <p class="py-2 font-semibold">{title1}</p>
+        <p class="leading-[170%] tracking-wide md:pr-6">{info1}</p>
+        <p class="py-2 font-semibold">{title2}</p>
+        <p class="leading-[170%] tracking-wide md:pr-4">{info2}</p>
+        <p class="py-2 font-semibold">{title3}</p>
+        <p class="leading-[170%] tracking-wide">{info3}</p>
+        <p class="py-2 font-semibold">{title4}</p>
+        <p class="leading-[170%] tracking-wide">{info4}</p>
+    </div>
+</div>

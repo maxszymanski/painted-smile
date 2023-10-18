@@ -75,6 +75,7 @@ const cards = [
         text: 'Chcecie uczynić Wasz piknik niezapomnianym wydarzeniem pełnym zabawy i relaksu? Nasza oferta animacji na pikniku jest idealnym rozwiązaniem, aby dostarczyć Wam i Waszym gościom mnóstwo radości i rozrywki na świeżym powietrzu!',
         className:
             'font-love grow text-center text-2xl text-mygreyblue sm:text-4xl',
+        more: false,
     },
     {
         iconBg: redBg,
