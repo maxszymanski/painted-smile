@@ -4,6 +4,8 @@ import Foto from './Foto.astro'
 const { fotos } = Astro.props
 ---
 
-<div class="grid h-64 grid-cols-3 grid-rows-2 gap-0.5 xl:h-[700px] xl:gap-1">
-    {fotos.map((foto) => <Foto src={foto.src} is={foto?.is} />)}
+<div
+    class="grid w-full grid-rows-2 md:h-80 md:grid-cols-3 md:gap-0.5 lg:h-96 xl:h-[500px] 2xl:h-[600px] 3xl:h-[700px]"
+>
+    {fotos.map((foto) => <Foto id={foto.id} is={foto?.is} />)}
 </div>

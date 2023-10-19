@@ -1,45 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Fotobox from '../components/Fotobox.astro'
-
-const fotos = [
-    [
-        {
-            src: 'https://images.unsplash.com/photo-1439436556258-1f7fab1bfd4f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        },
-        {
-            src: 'https://images.unsplash.com/photo-1568176579502-3fbc3aacebaf?auto=format&fit=crop&q=80&w=2072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        },
-        {
-            src: 'https://images.unsplash.com/photo-1599056377758-4808a7e70337?auto=format&fit=crop&q=80&w=2066&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            is: true,
-        },
-        {
-            src: 'https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        },
-        {
-            src: 'https://images.unsplash.com/photo-1622227922682-56c92e523e58?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        },
-    ],
-    [
-        {
-            src: 'https://images.unsplash.com/photo-1439436556258-1f7fab1bfd4f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-            is: true,
-        },
-        {
-            src: 'https://images.unsplash.com/photo-1568176579502-3fbc3aacebaf?auto=format&fit=crop&q=80&w=2072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        },
-        {
-            src: 'https://images.unsplash.com/photo-1599056377758-4808a7e70337?auto=format&fit=crop&q=80&w=2066&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        },
-        {
-            src: 'https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        },
-        {
-            src: 'https://images.unsplash.com/photo-1622227922682-56c92e523e58?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        },
-    ],
-]
+import fotos from '../data/gallery.js'
 ---
 
 <Layout
@@ -52,7 +14,9 @@ const fotos = [
     description="Galeria Malowany Uśmiech"
 >
     <div class="container mx-auto">
-        <div class="flex flex-row items-center justify-between px-4 pt-36">
+        <div
+            class="flex flex-row items-center justify-between px-4 pt-36 lg:pt-40 xl:pt-48"
+        >
             <h2
                 class="text-4xl font-medium text-myblue lg:text-5xl 2xl:text-6xl"
             >
@@ -61,11 +25,27 @@ const fotos = [
             <a
                 href="/"
                 class="rounded-xl bg-mygrey px-2 py-1 text-center text-2xl tracking-wide text-myblue transition-colors duration-300 hover:bg-mylightblue focus:outline-none focus:ring focus:ring-myblue focus:ring-offset-2 md:px-6 md:py-3"
-                ><span class="mb-2">←</span> Na główną</a
+                ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-arrow-left mb-0.5 inline"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12l14 0"></path>
+                    <path d="M5 12l6 6"></path>
+                    <path d="M5 12l6 -6"></path>
+                </svg> Powrót</a
             >
         </div>
     </div>
-    <div class="mx-auto max-w-[1920px] space-y-0.5 py-12 xl:space-y-1">
+    <div class="mx-auto max-w-[1920px] py-16 md:space-y-0.5 lg:py-20 xl:py-24">
         {fotos.map((box) => <Fotobox fotos={box} />)}
     </div>
 </Layout>

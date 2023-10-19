@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets'
+import footerBig from '../images/footer/footer-big.png'
+import footerSmall from '../images/footer/footer-small.png'
 import '@fontsource/atma'
 import Nav from '../components/Nav.astro'
 import Contact from '../components/Contact.astro'
@@ -31,6 +34,12 @@ const { title, mainPage, ogTitle, ogDescription, ogImage, ogUrl, description } =
         <Nav mainPage={mainPage} />
         <Contact />
         <slot />
+        <Image src={footerSmall} alt="" class="-mb-5 w-screen lg:hidden" />
+        <Image
+            src={footerBig}
+            alt=""
+            class="-mb-0.5 hidden w-screen lg:block"
+        />
         <Footer />
     </body>
 </html>
