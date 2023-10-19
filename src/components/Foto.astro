@@ -3,7 +3,7 @@ const { id, is = false } = Astro.props
 ---
 
 <img
-    src={!is ? `./images/foto${id}.png` : `./images/big${id}.png`}
+    src={!is ? `/images/foto${id}.png` : `/images/big${id}.png`}
     alt=""
     class:list={[
         'h-full w-full cursor-pointer transition-opacity xl:hover:opacity-80 ',
