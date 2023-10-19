@@ -1,0 +1,9 @@
+---
+import Foto from './Foto.astro'
+
+const { fotos } = Astro.props
+---
+
+<div class="grid h-64 grid-cols-3 grid-rows-2 gap-0.5 xl:h-[700px] xl:gap-1">
+    {fotos.map((foto) => <Foto src={foto.src} is={foto?.is} />)}
+</div>

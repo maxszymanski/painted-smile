@@ -1,8 +1,45 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Fotobox from '../components/Fotobox.astro'
 
-const basic =
-    'focus:ring focus:ring-myblue rounded-xl px-6 py-3 text-center focus:outline-none text-2xl tracking-wide transition-colors duration-300 focus:ring-offset-2 bg-mygrey text-myblue hover:bg-mylightblue'
+const fotos = [
+    [
+        {
+            src: 'https://images.unsplash.com/photo-1439436556258-1f7fab1bfd4f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1568176579502-3fbc3aacebaf?auto=format&fit=crop&q=80&w=2072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1599056377758-4808a7e70337?auto=format&fit=crop&q=80&w=2066&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            is: true,
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1622227922682-56c92e523e58?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+    ],
+    [
+        {
+            src: 'https://images.unsplash.com/photo-1439436556258-1f7fab1bfd4f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+            is: true,
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1568176579502-3fbc3aacebaf?auto=format&fit=crop&q=80&w=2072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1599056377758-4808a7e70337?auto=format&fit=crop&q=80&w=2066&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+        {
+            src: 'https://images.unsplash.com/photo-1622227922682-56c92e523e58?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        },
+    ],
+]
 ---
 
 <Layout
@@ -27,65 +64,8 @@ const basic =
                 ><span class="mb-2">←</span> Na główną</a
             >
         </div>
-        <div class="space-y-0.5 py-12 xl:space-y-2">
-            <div
-                class="grid h-64 grid-cols-3 grid-rows-2 gap-0.5 xl:h-[600px] xl:gap-2"
-            >
-                <img
-                    src="https://images.unsplash.com/photo-1439436556258-1f7fab1bfd4f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="h-full w-full"
-                />
-                <img
-                    src="https://images.unsplash.com/photo-1568176579502-3fbc3aacebaf?auto=format&fit=crop&q=80&w=2072&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="h-full w-full"
-                />
-                <img
-                    src="https://images.unsplash.com/photo-1599056377758-4808a7e70337?auto=format&fit=crop&q=80&w=2066&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="row-span-2 h-full w-full"
-                />
-                <img
-                    src="https://images.unsplash.com/photo-1622737133809-d95047b9e673?auto=format&fit=crop&q=80&w=1932&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="h-full w-full"
-                />
-                <img
-                    src="https://images.unsplash.com/photo-1622227922682-56c92e523e58?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="h-full w-full"
-                />
-            </div>
-            <div
-                class="grid h-64 grid-cols-3 grid-rows-2 gap-0.5 xl:h-[600px] xl:gap-2"
-            >
-                <img
-                    src="https://plus.unsplash.com/premium_photo-1696879453919-c17b624aed1b?auto=format&fit=crop&q=80&w=1888&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="row-span-2 h-full w-full"
-                />
-                <img
-                    src="https://images.unsplash.com/photo-1696312868790-a259aeccaa14?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="h-full w-full"
-                />
-                <img
-                    src="https://images.unsplash.com/photo-1697316346921-d89d1d388029?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="h-full w-full"
-                />
-                <img
-                    src="https://images.unsplash.com/photo-1697234109712-c072a141e7a4?auto=format&fit=crop&q=80&w=1936&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="h-full w-full"
-                />
-                <img
-                    src="https://images.unsplash.com/photo-1682686580922-2e594f8bdaa7?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt=""
-                    class="h-full w-full"
-                />
-            </div>
-        </div>
+    </div>
+    <div class="mx-auto max-w-[1920px] space-y-0.5 py-12 xl:space-y-1">
+        {fotos.map((box) => <Fotobox fotos={box} />)}
     </div>
 </Layout>
