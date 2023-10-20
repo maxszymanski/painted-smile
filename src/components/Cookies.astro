@@ -1,4 +1,4 @@
-<div class="cookie z-index fixed bottom-0 left-0 w-full bg-mycardblue">
+<div class="cookie z-index bottom-0 left-0 w-full bg-mycardblue">
     <div
         class="container mx-auto flex items-center justify-between gap-x-4 p-4 text-sm lg:justify-evenly xl:p-6 xl:text-base"
     >
@@ -28,13 +28,14 @@
 
     const cookieCheck = () => {
         if (localStorage.getItem('cookie')) {
-            cookieBox.classList.remove('block')
             cookieBox.classList.add('hidden')
+        } else {
+            cookieBox.classList.add('fixed')
         }
     }
     const closeCookieBox = () => {
         localStorage.setItem('cookie', 'true')
-        cookieBox.classList.remove('block')
+        cookieBox.classList.remove('fixed')
         cookieBox.classList.add('hidden')
     }
     cookieCheck()

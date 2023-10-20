@@ -4,7 +4,7 @@ const { id, is = false } = Astro.props
 
 <img
     src={!is ? `/images/foto${id}.png` : `/images/big${id}.png`}
-    alt=""
+    alt=`Zdjęcie z animacji nr${id}`
     loading="lazy"
     class:list={[
         'h-full w-full cursor-pointer transition-opacity xl:hover:opacity-80 ',

@@ -24,7 +24,7 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
         />
         <meta property="og:title" content={ogTitle} />
         <meta property="og:description" content={ogDescription} />
-        <meta property="og:image" content="link" />
+        <meta property="og:image" content="/images/logo-og.png" />
         <meta property="og:url" content={ogUrl} />
         <link rel="icon" type="image/x-icon" sizes="16x16" href="/icon-s.ico" />
         <link rel="icon" type="image/x-icon" sizes="32x32" href="/icon-b.ico" />
@@ -43,6 +43,10 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
         />
         <Footer />
         <Cookies />
+        <p
+            class="msg-status fixed left-1/2 top-0 z-50 hidden w-full max-w-xl -translate-x-1/2 items-center justify-center p-8 text-2xl"
+        >
+        </p>
     </body>
 </html>
 
@@ -52,6 +56,7 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
     const body = document.querySelector('.body')
     const ordersBtn = document.querySelectorAll('.order-btn')
     const closeForm = document.querySelectorAll('.close-form')
+    const msgStatus = document.querySelector('.msg-status')
     const formColors = [
         {
             bg: 'bg-myorder',
@@ -137,4 +142,28 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
             toggleForm(currentColor)
         })
     )
+
+    const msgCheck = () => {
+        if (document.location.search === '?mail_status=sent') {
+            msgStatus.classList.add('flex')
+            msgStatus.classList.add('bg-[#3DA352]')
+            msgStatus.textContent = 'Wiadomość wysłana!'
+
+            setTimeout(() => {
+                msgStatus.classList.remove('flex')
+                msgStatus.classList.remove('bg-[#3DA352]')
+            }, 3000)
+        }
+        if (document.location.search === '?mail_status=error') {
+            msgStatus.classList.add('flex')
+            msgStatus.classList.add('bg-red-500')
+            msgStatus.textContent =
+                'Wystąpił błąd. Napisz na kontakt@malowanyusmiech.pl'
+
+            setTimeout(() => {
+                msgStatus.classList.remove('flex')
+                msgStatus.classList.remove('bg-red-500')
+            }, 3000)
+        }
+    }
 </script>
