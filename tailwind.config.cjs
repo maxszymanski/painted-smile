@@ -13,6 +13,15 @@ module.exports = {
             ...defaultTheme.screens,
         },
         extend: {
+            keyframes: {
+                slide: {
+                    '0%': { bottom: '-100%' },
+                    '100%': { bottom: '0' },
+                },
+            },
+            animation: {
+                'spin-slide': 'slide 1s',
+            },
             fontFamily: {
                 sans: ['Atma', ...defaultTheme.fontFamily.sans],
                 love: 'Love Ya Like A Sister, sans-serif',

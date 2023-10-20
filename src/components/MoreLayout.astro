@@ -7,12 +7,28 @@ import MoreSanta from './MoreSanta.astro'
 ---
 
 <div
-    class="more-layout left-1/2 top-1/2 z-30 hidden h-full w-full max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-auto bg-mycardblue p-8 scrollbar scrollbar-track-opinionblue scrollbar-thumb-mylightblue scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-w-1.5 sm:rounded-md xl:h-[90%]"
+    class="more-layout left-1/2 top-1/2 z-50 hidden h-full w-full max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-auto bg-mycardblue p-8 scrollbar scrollbar-track-opinionblue scrollbar-thumb-mylightblue scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-w-1.5 sm:rounded-md xl:h-[90%]"
 >
     <div class="flex flex-row-reverse lg:pt-6">
         <button
             class="close-more relative rounded-xl bg-mylightblue px-3 py-1.5 text-center text-xl tracking-wide text-myblue transition-colors duration-300 hover:bg-myorder focus:outline-none focus:ring focus:ring-myblue focus:ring-offset-2 lg:text-2xl"
-            ><span class="mb-2">←</span> Zamknij
+            ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-arrow-left mb-0.5 inline"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l14 0"></path>
+                <path d="M5 12l6 6"></path>
+                <path d="M5 12l6 -6"></path>
+            </svg> Zamknij
         </button>
     </div>
     <MoreBirthday />

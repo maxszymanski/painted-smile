@@ -26,8 +26,32 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
         <meta property="og:description" content={ogDescription} />
         <meta property="og:image" content="/images/logo-og.png" />
         <meta property="og:url" content={ogUrl} />
-        <link rel="icon" type="image/x-icon" sizes="16x16" href="/icon-s.ico" />
-        <link rel="icon" type="image/x-icon" sizes="32x32" href="/icon-b.ico" />
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-8ZXHTEF2MJ"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'G-8ZXHTEF2MJ')
+        </script>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            sizes="16x16"
+            href="/images/icon-s.ico"
+        />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            sizes="32x32"
+            href="/images/icon-b.ico"
+        />
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
@@ -44,7 +68,7 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
         <Footer />
         <Cookies />
         <p
-            class="msg-status fixed left-1/2 top-0 z-50 hidden w-full max-w-xl -translate-x-1/2 items-center justify-center p-8 text-2xl"
+            class="msg-status fixed left-1/2 top-0 z-50 hidden w-full max-w-xl -translate-x-1/2 items-center justify-center p-8 font-exo text-2xl"
         >
         </p>
     </body>
@@ -57,6 +81,9 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
     const ordersBtn = document.querySelectorAll('.order-btn')
     const closeForm = document.querySelectorAll('.close-form')
     const msgStatus = document.querySelector('.msg-status')
+    const cookieBox = document.querySelector('.cookie')
+    const cookieBtn = document.querySelector('.cookie-btn')
+
     const formColors = [
         {
             bg: 'bg-myorder',
@@ -142,9 +169,24 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
             toggleForm(currentColor)
         })
     )
+    const cookieCheck = () => {
+        if (localStorage.getItem('cookie')) {
+            cookieBox.classList.add('hidden')
+        } else {
+            setTimeout(() => {
+                cookieBox.classList.add('block')
+            }, 1000)
+        }
+    }
+    const closeCookieBox = () => {
+        localStorage.setItem('cookie', 'true')
+        cookieBox.classList.remove('block')
+        cookieBox.classList.add('hidden')
+    }
 
     const msgCheck = () => {
         if (document.location.search === '?mail_status=sent') {
+            msgStatus.classList.remove('hidden')
             msgStatus.classList.add('flex')
             msgStatus.classList.add('bg-[#3DA352]')
             msgStatus.textContent = 'Wiadomość wysłana!'
@@ -152,18 +194,23 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
             setTimeout(() => {
                 msgStatus.classList.remove('flex')
                 msgStatus.classList.remove('bg-[#3DA352]')
+                msgStatus.classList.add('hidden')
             }, 3000)
         }
         if (document.location.search === '?mail_status=error') {
+            msgStatus.classList.remove('hidden')
             msgStatus.classList.add('flex')
             msgStatus.classList.add('bg-red-500')
-            msgStatus.textContent =
-                'Wystąpił błąd. Napisz na kontakt@malowanyusmiech.pl'
+            msgStatus.textContent = 'Wystąpił błąd. Spróbuj ponownie.'
 
             setTimeout(() => {
                 msgStatus.classList.remove('flex')
-                msgStatus.classList.remove('bg-red-500')
+                msgStatus.classList.remove('bg-red-400')
+                msgStatus.classList.add('hidden')
             }, 3000)
         }
     }
+    cookieBtn.addEventListener('click', closeCookieBox)
+    msgCheck()
+    cookieCheck()
 </script>
