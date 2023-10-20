@@ -1,0 +1,42 @@
+<div class="cookie z-index fixed bottom-0 left-0 w-full bg-mycardblue">
+    <div
+        class="container mx-auto flex items-center justify-between gap-x-4 p-4 text-sm lg:justify-evenly xl:p-6 xl:text-base"
+    >
+        <div class="space-y-2">
+            <p>
+                Na stronie wykorzystujemy pliki cookies, aby zbierać dane
+                dotyczące ruchu na stronie.
+            </p>
+            <p>
+                Więcej informacji znajdziesz w <a
+                    href="/politykaprywatnosci"
+                    class="text-myblue transition-colors duration-300 hover:text-myorder focus:text-myorder focus:outline-none"
+                    >polityce prywatności</a
+                >.
+            </p>
+        </div>
+        <button
+            class="cookie-btn rounded-xl bg-myblue px-3 py-1.5 text-center text-base tracking-wide text-mygrey transition-colors duration-300 hover:bg-myspiritblue focus:bg-myspiritblue focus:outline-none focus:ring focus:ring-myspiritblue focus:ring-offset-2 xl:px-6 xl:py-3"
+            >Akceptuj</button
+        >
+    </div>
+</div>
+
+<script>
+    const cookieBox = document.querySelector('.cookie')
+    const cookieBtn = document.querySelector('.cookie-btn')
+
+    const cookieCheck = () => {
+        if (localStorage.getItem('cookie')) {
+            cookieBox.classList.remove('block')
+            cookieBox.classList.add('hidden')
+        }
+    }
+    const closeCookieBox = () => {
+        localStorage.setItem('cookie', 'true')
+        cookieBox.classList.remove('block')
+        cookieBox.classList.add('hidden')
+    }
+    cookieCheck()
+    cookieBtn.addEventListener('click', closeCookieBox)
+</script>
