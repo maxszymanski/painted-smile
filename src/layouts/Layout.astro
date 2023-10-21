@@ -17,6 +17,8 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         {!mainPage && <meta name="robots" content="noindex" />}
+        <meta http-equiv="cache-control" content="public" />
+        <meta http-equiv="cache-control" content="max-age=31536000" />
         <meta name="description" content={description} />
         <meta
             name="keywords"

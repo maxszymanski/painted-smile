@@ -7,5 +7,5 @@ const { fotos } = Astro.props
 <div
     class="grid w-full grid-rows-2 md:h-80 md:grid-cols-3 md:gap-0.5 lg:h-96 xl:h-[500px] 2xl:h-[650px] 3xl:h-[750px]"
 >
-    {fotos.map((foto) => <Foto id={foto.id} is={foto?.is} />)}
+    {fotos.map((foto) => <Foto id={foto.id} is={foto?.is} foto={foto.foto} />)}
 </div>

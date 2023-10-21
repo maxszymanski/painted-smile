@@ -1,10 +1,10 @@
 ---
-const { id, is = false } = Astro.props
+import { Image } from 'astro:assets'
+const { id, foto, is = false } = Astro.props
 ---
 
-<img
-    src={!is ? `/images/foto${id}.png` : `/images/big${id}.png`}
+<Image
+    src={foto}
     alt=`Zdjęcie z animacji nr${id}`
-    loading="lazy"
     class:list={['h-full w-full', { 'row-span-2': is }]}
 />
