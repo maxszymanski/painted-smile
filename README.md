@@ -3,52 +3,37 @@
 ```sh
 npm create astro@latest -- --template basics
 ```
+# Malowany Uśmiech
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+This website was created as a practice project to improve skills in design, optimisation and client collaboration.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Adopting the latest SEO and optimisation standards was a priority and the project allowed me to gain valuable experience working on a website from start to finish.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Live: [Malowany Uśmiech](https://malowanyusmiech.pl/)
 
-## 🚀 Project Structure
+## Table of Contents
 
-Inside of your Astro project, you'll see the following folders and files:
+- [General Info](#general-information)
+- [Technologies Used](#technologies-used)
+- [Contact](#contact)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## General Information
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- The main purpose of this project was to gain practical experience in developing websites according to the latest optimisation and SEO standards. It was an excellent exercise to improve skills in this area.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- The project also enabled me to gain experience in working with clients, meeting their needs and expectations.
 
-Any static assets, like images, can be placed in the `public/` directory.
 
-## 🧞 Commands
+## Technologies Used
 
-All commands are run from the root of the project, from a terminal:
+- [![Built with Astro](https://astro.badg.es/v2/built-with-astro/tiny.svg)](https://astro.build)
+  
+- [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- [![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Contact
+
+Created by [@Max Szymański](https://github.com/maxszymanski) - feel free to contact me!
