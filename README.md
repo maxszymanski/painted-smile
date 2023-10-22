@@ -1,8 +1,4 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
 # Malowany Uśmiech
 
 This website was created as a practice project to improve skills in design, optimisation and client collaboration.
