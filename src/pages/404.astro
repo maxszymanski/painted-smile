@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets'
+import minions from '../images/minions.gif'
+---
+
+<!doctype html>
+<html lang="pl" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="robots" content="noindex" />
+        <meta http-equiv="cache-control" content="public" />
+        <meta http-equiv="cache-control" content="max-age=31536000" />
+        <meta
+            name="keywords"
+            content="animacje dla dzieci, urodziny, wesela, bale, pikniki, zabawy dla dzieci, animacje tematyczne, atrakcje dla dzieci, wizyta Mikołaja, święty Mikołaj"
+        />
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-8ZXHTEF2MJ"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || []
+            function gtag() {
+                dataLayer.push(arguments)
+            }
+            gtag('js', new Date())
+
+            gtag('config', 'G-8ZXHTEF2MJ')
+        </script>
+        <link
+            rel="icon"
+            type="image/x-icon"
+            sizes="16x16"
+            href="/images/icon-s.ico"
+        />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            sizes="32x32"
+            href="/images/icon-b.ico"
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>Malowany uśmiech | 404</title>
+    </head>
+    <body class="body relative font-love">
+        <div
+            class="container mx-auto flex min-h-[100svh] w-full flex-col items-center justify-center"
+        >
+            <p
+                class="text-4xl font-semibold text-myblue xs:text-5xl xl:text-7xl"
+            >
+                Page 404
+            </p>
+            <!-- 400x225 -->
+            <div class="text-center">
+                <Image
+                    src={minions}
+                    alt="bijące się minionki"
+                    class="xl: py-4 xs:py-6 xl:py-12"
+                />
+                <p
+                    class="mb-6 text-lg xs:mb-10 xs:text-xl xl:mb-16 xl:text-2xl xl:leading-[160%]"
+                >
+                    Coś poszło nie tak <br />Wróć na stronę główną :)
+                </p>
+
+                <a
+                    href="/"
+                    class="rounded-xl bg-mygrey px-2 py-1 text-center text-2xl tracking-wide text-myblue transition-colors duration-300 hover:bg-mylightblue focus:outline-none focus:ring focus:ring-myblue focus:ring-offset-2 md:px-6 md:py-3 xl:text-3xl"
+                    ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-left mb-0.5 inline"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"
+                        ></path>
+                        <path d="M5 12l14 0"></path>
+                        <path d="M5 12l6 6"></path>
+                        <path d="M5 12l6 -6"></path>
+                    </svg> Powrót</a
+                >
+            </div>
+        </div>
+    </body>
+</html>

@@ -39,6 +39,7 @@ module.exports = {
                 about: "url('/src/images/aboutus/about.webp')",
                 'footer-big': "url('/src/images/footer/footer-big.png')",
                 'footer-small': "url('/src/images/footer/footer-small.png')",
+                minions: "url('/src/images/minions.gif')",
             },
             colors: {
                 mypink: '#FF8DA6',

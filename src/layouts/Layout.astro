@@ -61,10 +61,14 @@ const { title, mainPage, ogTitle, ogDescription, ogUrl, description } =
         <Nav mainPage={mainPage} />
         <Contact />
         <slot />
-        <Image src={footerSmall} alt="" class="-mb-5 w-screen lg:hidden" />
+        <Image
+            src={footerSmall}
+            alt="niebieskie tło dla stopki"
+            class="-mb-5 w-screen lg:hidden"
+        />
         <Image
             src={footerBig}
-            alt=""
+            alt="niebieskie tło dla stopki"
             class="-mb-0.5 hidden w-screen lg:block"
         />
         <Footer />

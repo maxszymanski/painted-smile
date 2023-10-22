@@ -20,7 +20,7 @@ const cards = [
         bg: redBg,
         pin: redPin,
         altText: 'Paczki z prezentami urodzinowymi',
-        title: 'Animacja na urodzinach',
+        title: 'Animacje na urodzinach',
         text: 'Chcesz uczynić urodziny Twojego dziecka niezapomnianymi? Oferujemy profesjonalne usługi animacyjne, które dostarczą mnóstwo radości i uśmiechów na twarzach maluchów oraz dorosłych! Personalizujemy animacje, aby sprawić, że dziecko poczuje się wyjątkowo.',
         priceOne: '1 animator do 10 dzieci 1h/200zł',
         priceTwo: '2 animatorów 1h/250zł',
@@ -33,12 +33,12 @@ const cards = [
         bg: blueBg,
         pin: bluePin,
         altText: 'Tort urodziniowy',
-        title: 'Animacja na weselu',
+        title: 'Animacje na weselu',
         text: 'Wasze wesele to wyjątkowy dzień, który chcecie podzielić z najbliższymi, w tym z najmłodszymi gośćmi. Nasza oferta animacji dla dzieci na weselu pozwoli rodzicom i dorosłym bawić się na parkiecie, wiedząc, że ich dzieci mają zapewnioną dobrą zabawę i opiekę.',
         priceOne: '2 animatorów 2h/ 600zł',
         priceTwo: 'Każda kolejna godzina 200zł',
         className:
-            'font-love grow text-center text-2xl text-myspiritblue sm:text-4xl',
+            'font-love grow text-center text-2xl text-[#07a0c7] sm:text-4xl',
     },
     {
         iconBg: yellowBg,
@@ -59,7 +59,7 @@ const cards = [
         bg: orangeBg,
         pin: yellowPin,
         altText: 'Maska karnawałowa',
-        title: 'Animacja na balu Karnawałowym ',
+        title: 'Animacje na balu Karnawałowym ',
         text: 'Bal karnawałowy dla dzieci to czas, gdy marzenia stają się rzeczywistością, a wyobraźnia nie zna granic. Nasza oferta animacji na balu karnawałowym zapewni Waszym dzieciom niezapomnianą przygodę w świecie kolorów, bajek i uśmiechu.',
         priceOne: 'Cena: 1 animator 800 zł/2h',
         className:
@@ -71,7 +71,7 @@ const cards = [
         bg: greenBg,
         pin: bluePin,
         altText: 'Kociołek na ognisku',
-        title: 'Animacja na pikniku',
+        title: 'Animacje na pikniku',
         text: 'Chcecie uczynić Wasz piknik niezapomnianym wydarzeniem pełnym zabawy i relaksu? Nasza oferta animacji na pikniku jest idealnym rozwiązaniem, aby dostarczyć Wam i Waszym gościom mnóstwo radości i rozrywki na świeżym powietrzu!',
         className:
             'font-love grow text-center text-2xl text-mygreyblue sm:text-4xl',
